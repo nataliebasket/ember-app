@@ -47,5 +47,10 @@ module.exports = function(environment) {
     // here you can enable a production-specific feature
   }
 
+  if (environment === 'ci') {
+    ENV.rootURL = '/flexberry-ember/';
+    // here you can enable a production-specific feature
+  }
+
   return ENV;
 };
