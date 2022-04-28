@@ -16,9 +16,6 @@ jobs:
           version: 10.x
       - name: Checkout branch
         uses: actions/checkout@v2
-        with:
-          lfs: true
-          token: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Clean install dependencies
         run: npm ci
@@ -27,4 +24,10 @@ jobs:
         run: npx ember build --enviroment=ci
 
       - name: Run deploy script
+        uses: github-pages-deploy-action@v4.2.2
         run: sh ./scripts/deploy-to-gh-pages.sh
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          folder: ./build
+          branch: gh-pages
+
