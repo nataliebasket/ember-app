@@ -25,7 +25,3 @@ jobs:
 
       - name: Run deploy script
         run: sh ./scripts/deploy-to-gh-pages.sh
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          # folder: ./dist
-          # branch: gh-pages

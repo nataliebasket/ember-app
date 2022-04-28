@@ -17,6 +17,6 @@ git push -f origin HEAD:gh-pages
 rm -r dist
 
 git checkout -f master
-git branch -D gh-pages
+# git branch -D gh-pages
 
 echo "Successfully deployed"
