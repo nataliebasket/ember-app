@@ -3,8 +3,8 @@
 # Exit with nonzero exit code if anything fails.
 set -e
 
-# git config user.name "Natalie Khokhlova"
-# git config user.email "nataliebasket@gmail.com"
+git config user.name "Хохлова Наталия"
+git config user.email "nataliebasket@gmail.com"
 
 echo "Start to deploy..."
 
