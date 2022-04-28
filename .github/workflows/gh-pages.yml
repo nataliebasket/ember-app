@@ -24,6 +24,8 @@ jobs:
         run: npx ember build --enviroment=ci
 
       - name: Run deploy script
+        uses: nataliebasket/github-pages-deploy-action@v4.2.2
+        uses: nataliebasket/ember-что-то-там/github-pages-deploy-action@v4.2.2
         uses: github-pages-deploy-action@v4.2.2
         # run: sh ./scripts/deploy-to-gh-pages.sh
         with:
