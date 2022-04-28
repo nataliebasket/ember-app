@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub-Pages
 
 on:
   push:
@@ -6,30 +6,29 @@ on:
       - master
 
 jobs:
-  gh-pages-deploy:
-    name: Deploying to GitHub Pages
+  deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Setup Node.js for use with actions
-        uses: actions/setup-node@v2-beta
-        with:
-          version: 10.x
-      - name: Checkout branch
-        uses: actions/checkout@v2
 
-      - name: Clean install dependencies
+    steps:
+      - name: Check Out
+        uses: actions/checkout@v2.4.0
+        with:
+          persist-credentials: false
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+
+      - name: Installing Dependencies
         run: npm ci
 
-      - name: Build Application
+      - name: Building
         run: npx ember build --enviroment=ci
 
-      - name: Run deploy script
-        # uses: nataliebasket/github-pages-deploy-action@v4.2.2
-        uses: nataliebasket/flexberry-ember/github-pages-deploy-action@v4.2.2
-        # uses: github-pages-deploy-action@v4.2.2
-        # run: sh ./scripts/deploy-to-gh-pages.sh
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          folder: ./build
+          folder: ./dist
           branch: gh-pages
-
