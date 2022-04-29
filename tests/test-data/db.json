@@ -1,0 +1,66 @@
+{
+  "speakers": [
+    {
+      "id": 1,
+      "last_name": "Иванов",
+      "first_name": "Иван",
+      "patronymic": "Иванович"
+    },
+    {
+      "id": 2,
+      "last_name": "Петрова",
+      "first_name": "Анастасия",
+      "patronymic": "Валентиновна"
+    },
+    {
+      "id": 3,
+      "last_name": "Александров",
+      "first_name": "Александр",
+      "patronymic": "Александрович"
+    },
+    {
+      "id": 4,
+      "last_name": "Журавлёв",
+      "first_name": "Сергей",
+      "patronymic": "Евгеньевич"
+    },
+    {
+      "id": 5,
+      "last_name": "Хорошилов",
+      "first_name": "Владимир",
+      "patronymic": "Александроович"
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "name": "Побег из шоушенка",
+      "author": "Кинг Стивен",
+      "pages": 300,
+      "cover_url": "#",
+      "description_url": "#",
+      "tags": "#тюрьма #дружба #совесть",
+      "average_rating": 80
+    },
+    {
+      "id": 2,
+      "name": "Книжный вор",
+      "author": "Маркус Зусак",
+      "pages": 420,
+      "cover_url": "#",
+      "description_url": "#",
+      "tags": "#война #смерть #жизнь",
+      "average_rating": 95
+    },
+    {
+      "id": 3,
+      "name": "Повелитель мух",
+      "author": "Уильям Голдинг",
+      "pages": 320,
+      "cover_url": "#",
+      "description_url": "#",
+      "tags": "#мальчики #милосердие #любовь #роман",
+      "average_rating": 89
+    }
+  ]
+}
