@@ -60,7 +60,37 @@
       "cover_url": "#",
       "description_url": "#",
       "tags": "#мальчики #милосердие #любовь #роман",
-      "average_rating": 89
+      "average_rating": 85
+    },
+    {
+      "id": 3,
+      "name":  "Хоббит или туда и обратно",
+      "author": "Дж. Р. Р. Толкиен",
+      "pages": 450,
+      "cover_url": "#",
+      "description_url": "#",
+      "tags": "#фантастика #дружба #дракон #кольцо",
+      "average_rating": 90
+    },
+    {
+      "id": 3,
+      "name": "Не отпускай меня",
+      "author": "Исигуро Кадзуо",
+      "pages": 200,
+      "cover_url": "#",
+      "description_url": "#",
+      "tags": "#любовь #книга #дружба",
+      "average_rating": 65
+    },
+    {
+      "id": 3,
+      "name": "Имя розы",
+      "author": "У. Эко",
+      "pages": 180,
+      "cover_url": "#",
+      "description_url": "#",
+      "tags": "#книга",
+      "average_rating": 60
     }
   ]
 }
