@@ -24,7 +24,7 @@ jobs:
         run: npm ci
 
       - name: Building
-        run: npx ember build --enviroment=ci
+        run: npx ember build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.2
