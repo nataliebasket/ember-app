@@ -1365,7 +1365,7 @@ define("flexberry-ember/templates/error", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "GSs4V+Ig", "block": "{\"symbols\":[],\"statements\":[[6,\"div\"],[10,\"class\",\"container h-100\"],[8],[0,\"\\n  \"],[6,\"div\"],[10,\"class\",\"row align-items-center h-100\"],[8],[0,\"\\n    \"],[6,\"img\"],[10,\"src\",\"images/error.gif\"],[10,\"alt\",\"Картинка ошибки загрузки\"],[8],[9],[0,\"\\n  \"],[9],[0,\"\\n\"],[9]],\"hasEval\":false}", "meta": { "moduleName": "flexberry-ember/templates/error.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "26rYoO26", "block": "{\"symbols\":[],\"statements\":[[6,\"div\"],[10,\"class\",\"container h-100\"],[8],[0,\"\\n  \"],[6,\"div\"],[10,\"class\",\"row align-items-center h-100 home-page-nav\"],[8],[0,\"\\n    \"],[6,\"img\"],[10,\"src\",\"images/error.gif\"],[10,\"alt\",\"Картинка ошибки загрузки\"],[8],[9],[0,\"\\n  \"],[9],[0,\"\\n\"],[9]],\"hasEval\":false}", "meta": { "moduleName": "flexberry-ember/templates/error.hbs" } });
 });
 define("flexberry-ember/templates/index", ["exports"], function (exports) {
   "use strict";
@@ -1381,7 +1381,7 @@ define("flexberry-ember/templates/loading", ["exports"], function (exports) {
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.default = Ember.HTMLBars.template({ "id": "rO3O7E87", "block": "{\"symbols\":[],\"statements\":[[6,\"div\"],[10,\"class\",\"container h-100\"],[8],[0,\"\\n  \"],[6,\"div\"],[10,\"class\",\"row align-items-center h-100 home-page-nav\"],[8],[0,\"\\n        \"],[6,\"img\"],[10,\"src\",\"images/loading.gif\"],[10,\"alt\",\"Картинка загрузки\"],[8],[9],[0,\"\\n  \"],[9],[0,\"\\n\"],[9]],\"hasEval\":false}", "meta": { "moduleName": "flexberry-ember/templates/loading.hbs" } });
+  exports.default = Ember.HTMLBars.template({ "id": "VxDw0xvN", "block": "{\"symbols\":[],\"statements\":[[6,\"div\"],[10,\"class\",\"container h-100\"],[8],[0,\"\\n  \"],[6,\"div\"],[10,\"class\",\"row align-items-center h-100 home-page-nav\"],[8],[0,\"\\n    \"],[6,\"img\"],[10,\"src\",\"images/loading.gif\"],[10,\"alt\",\"Картинка загрузки\"],[8],[9],[0,\"\\n  \"],[9],[0,\"\\n\"],[9]],\"hasEval\":false}", "meta": { "moduleName": "flexberry-ember/templates/loading.hbs" } });
 });
 define("flexberry-ember/templates/speakers", ["exports"], function (exports) {
   "use strict";
@@ -1413,6 +1413,6 @@ catch(err) {
 });
 
 if (!runningTests) {
-  require("flexberry-ember/app")["default"].create({"name":"flexberry-ember","version":"0.0.0+3b369889"});
+  require("flexberry-ember/app")["default"].create({"name":"flexberry-ember","version":"0.0.0+f25c4fa6"});
 }
 //# sourceMappingURL=flexberry-ember.map
