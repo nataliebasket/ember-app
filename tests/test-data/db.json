@@ -2,33 +2,33 @@
   "speakers": [
     {
       "id": 1,
-      "last_name": "Иванов",
-      "first_name": "Иван",
-      "patronymic": "Иванович"
+      "last_name": "Бэгинс",
+      "first_name": "Фродо",
+      "patronymic": "Ширович"
     },
     {
       "id": 2,
-      "last_name": "Петрова",
-      "first_name": "Анастасия",
-      "patronymic": "Валентиновна"
+      "last_name": "Леголас",
+      "first_name": "Эльф",
+      "patronymic": "Стрелкович"
     },
     {
       "id": 3,
-      "last_name": "Александров",
-      "first_name": "Александр",
-      "patronymic": "Александрович"
+      "last_name": "Эльфия",
+      "first_name": "Галадриэль",
+      "patronymic": "Белая"
     },
     {
       "id": 4,
-      "last_name": "Журавлёв",
-      "first_name": "Сергей",
-      "patronymic": "Евгеньевич"
+      "last_name": "Бэгинс",
+      "first_name": "Бильбо",
+      "patronymic": "Ширович"
     },
     {
       "id": 5,
-      "last_name": "Хорошилов",
-      "first_name": "Владимир",
-      "patronymic": "Александроович"
+      "last_name": "Маг",
+      "first_name": "Гендальф",
+      "patronymic": "Серый"
     }
   ],
   "books": [
@@ -39,7 +39,7 @@
       "pages": 300,
       "cover_url": "#",
       "description_url": "#",
-      "tags": "#тюрьма #дружба #совесть",
+      "tags": ["#тюрьма", "#дружба", "#совесть"],
       "average_rating": 80
     },
     {
@@ -49,7 +49,7 @@
       "pages": 420,
       "cover_url": "#",
       "description_url": "#",
-      "tags": "#война #смерть #жизнь",
+      "tags": ["#война", "#смерть", "#жизнь", "#любовь"],
       "average_rating": 95
     },
     {
@@ -59,7 +59,7 @@
       "pages": 320,
       "cover_url": "#",
       "description_url": "#",
-      "tags": "#мальчики #милосердие #любовь #роман",
+      "tags": ["#мальчики", "#милосердие", "#любовь", "#роман"],
       "average_rating": 85
     },
     {
@@ -69,7 +69,7 @@
       "pages": 450,
       "cover_url": "#",
       "description_url": "#",
-      "tags": "#фантастика #дружба #дракон #кольцо",
+      "tags": ["#фантастика", "#дружба", "#дракон", "#кольцо"],
       "average_rating": 90
     },
     {
@@ -79,7 +79,7 @@
       "pages": 200,
       "cover_url": "#",
       "description_url": "#",
-      "tags": "#любовь #книга #дружба",
+      "tags": ["#любовь", "#книга", "#дружба"],
       "average_rating": 65
     },
     {
@@ -89,7 +89,7 @@
       "pages": 180,
       "cover_url": "#",
       "description_url": "#",
-      "tags": "#книга",
+      "tags": ["#книга"],
       "average_rating": 60
     }
   ]
