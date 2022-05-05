@@ -10,7 +10,7 @@
       "id": 2,
       "last_name": "Legolas",
       "first_name": "Elf",
-      "patronymic": "Faster"
+      "patronymic": "Fasterrrr"
     },
     {
       "id": 3,
@@ -39,8 +39,12 @@
     {
       "last_name": "Martin",
       "first_name": "Luter",
-      "patronymic": "King",
+      "patronymic": "Kingggg",
       "id": 7
+    },
+    {
+      "patronymic": "",
+      "id": 8
     }
   ],
   "books": [

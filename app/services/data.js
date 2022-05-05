@@ -90,7 +90,6 @@ export default Service.extend({
   },
 
   updateBook(book) {
-    
     return fetch(`${ENV.backendURL}/books/${book.id}`, {
       method: 'PATCH',
       headers: {

@@ -4,6 +4,7 @@ import { inject as service } from '@ember/service';
 export default Controller.extend({
   queryParams: ["search"],
   search: '',
+
   dataService: service('data'),
 
   authorize: false,
@@ -15,8 +16,7 @@ export default Controller.extend({
 
     searchSpeaker(e) {
       e.preventDefault();
-
-      this.refresh();
-    }
+      window.location.reload();
+    },
   }
 });
