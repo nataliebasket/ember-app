@@ -5,7 +5,7 @@ export default Controller.extend({
   dataService: service('data'),
 
   actions: {
-    async editSpeaker(e) {
+    async saveSpeaker(e) {
       e.preventDefault();
 
       await this.get("dataService").updateSpeaker({
@@ -18,7 +18,7 @@ export default Controller.extend({
       this.transitionToRoute('speakers');
     },
 
-    cancelEditSpeaker () {
+    cancelSaveSpeaker () {
       this.transitionToRoute('speakers');
     }
   }

@@ -5,7 +5,7 @@ export default Controller.extend({
   dataService: service('data'),
 
   actions: {
-    async saveBook(e) {
+    async createNewBook(e) {
       e.preventDefault();
 
       await this.get("dataService").createBook({
@@ -14,7 +14,7 @@ export default Controller.extend({
         pages: this.get('bookPages'),
         cover_url: this.get('bookImgURL'),
         description_url: this.get('bookURL'),
-        tags: this.get('bookTags')
+        tags: this.get('bookTags').split(','),
         });
 
       this.transitionToRoute('books');

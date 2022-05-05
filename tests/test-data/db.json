@@ -48,9 +48,9 @@
       "id": 1,
       "name": "Побег из шоушенка",
       "author": "Кинг Стивен",
-      "pages": 300,
+      "pages": "333",
       "cover_url": "#",
-      "description_url": "#",
+      "description_url": "http://gfgf",
       "tags": [
         "#тюрьма",
         "#дружба",
@@ -64,12 +64,10 @@
       "author": "Маркус Зусак",
       "pages": 420,
       "cover_url": "#",
-      "description_url": "#",
+      "description_url": "http://khkn.nj",
       "tags": [
         "#война",
-        "#смерть",
-        "#жизнь",
-        "#любовь"
+        "#смерть"
       ],
       "average_rating": 95
     },
@@ -79,7 +77,7 @@
       "author": "Уильям Голдинг",
       "pages": 320,
       "cover_url": "#",
-      "description_url": "#",
+      "description_url": "http://jhjuh.tu",
       "tags": [
         "#мальчики",
         "#милосердие",
@@ -128,6 +126,37 @@
         "#книга"
       ],
       "average_rating": 60
+    },
+    {
+      "name": "Незнайка",
+      "author": "Носов",
+      "pages": "100",
+      "cover_url": "",
+      "description_url": "http://gfgfg.ry",
+      "tags": "#book,#game",
+      "id": 7
+    },
+    {
+      "name": "рор",
+      "author": "ро",
+      "pages": "1",
+      "cover_url": "",
+      "description_url": "http://bfgfbf.hgh",
+      "tags": "#privet,#knig",
+      "id": 8
+    },
+    {
+      "name": "Незнайка",
+      "author": "Носов",
+      "pages": "111",
+      "cover_url": "http://neznaika.ru",
+      "description_url": "Книга о дружбе",
+      "tags": [
+        "#friends",
+        "#kniga",
+        "#girls"
+      ],
+      "id": 9
     }
   ]
 }
