@@ -5,6 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'flexberry-ember',
     environment,
     rootURL: '/',
+    backendURL: 'http://localhost:3000',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -49,6 +50,7 @@ module.exports = function(environment) {
 
   if (environment === 'ci') {
     ENV.rootURL = '/flexberry-ember/';
+    // ENV.backendURL = 'адрес сервера';
     // here you can enable a production-specific feature
   }
 
