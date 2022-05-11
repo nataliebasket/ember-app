@@ -10,6 +10,25 @@ module.exports = function(defaults) {
     }
   });
 
+  app.import('vendor/bootstrap.min.css');
+  app.import('vendor/bootstrap-select.min.css');
+  app.import('vendor/tagsinput.css');
+  // app.import('vendor/bootstrap-datepicker.css');
+
+  // app.import('vendor/jquery-3.5.1.slim.min.js');
+  // app.import('vendor/popper.min.js');
+  // app.import('vendor/bootstrap.bundle.min.js');
+  // app.import('vendor/tagsinput.js');
+  // app.import('vendor/bootstrap-file.js');
+
+
+  // app.import('vendor/bootstrap-datepicker.ru.min.js');
+  // app.import('vendor/bootstrap-datepicker.min.js');
+
+
+  // app.import('vendor/bootstrap-select.min.js');
+
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

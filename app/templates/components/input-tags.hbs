@@ -1,0 +1,6 @@
+{{!-- {{input type="text" class="form-control form-control-lg" id="inputPatronymic" placeholder="#Теги через запятую"}} --}}
+<select multiple="multiple" data-role="tagsinput" style="display: none;" id="inputTags">
+  {{#each tags as |tag|}}
+    <option value="{{tag}}" selected="selected">{{tag}}</option>
+  {{/each}}
+</select>

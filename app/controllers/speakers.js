@@ -7,8 +7,6 @@ export default Controller.extend({
 
   dataService: service('data'),
 
-  authorize: false,
-
   actions: {
     deleteSpeaker(speaker) {
       this.get("dataService").deleteSpeaker(speaker);
@@ -16,7 +14,8 @@ export default Controller.extend({
 
     searchSpeaker(e) {
       e.preventDefault();
-      window.location.reload();
+      this.set("search", this.get("searchSpeaker"));
+      // this.send("reloadPage");
     },
   }
 });

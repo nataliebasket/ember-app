@@ -21,16 +21,21 @@ export default Service.extend({
     return this.get('speakers');
   },
 
-  // async getSpeakers() {
-  //   let response = await fetch(`${ENV.backendURL}/speakers`);
-  //   let speakers = await response.json();
-  //   this.get('speakers').clear();
-  //   this.get('speakers').pushObjects(speakers);
-  //   return this.get('speakers');
-  // },
+  async getBooks(search, tag) {
+    let queryParams = '';
+    if (search && !tag) {
+      queryParams = `?q=${search}`;
+    }
 
-  async getBooks() {
-    let response = await fetch(`${ENV.backendURL}/books`);
+    if (search && tag) {
+      queryParams = `?q=${search}&tags_like=${tag}`;
+    }
+
+    if (!search && tag) {
+      queryParams = `?tags_like=${tag}`;
+    }
+
+    let response = await fetch(`${ENV.backendURL}/books${queryParams}`);
     let books = await response.json();
     this.get('books').clear();
     this.get('books').pushObjects(books);

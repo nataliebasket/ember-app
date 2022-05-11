@@ -37,13 +37,15 @@
       "id": 6
     },
     {
-      "last_name": "Martin",
-      "first_name": "Luter",
-      "patronymic": "Kingggg",
+      "last_name": "Popova",
+      "first_name": "Anna",
+      "patronymic": "Ivanovna",
       "id": 7
     },
     {
-      "patronymic": "",
+      "last_name": "rttr",
+      "first_name": "rtr",
+      "patronymic": "rtrt",
       "id": 8
     }
   ],
@@ -58,7 +60,7 @@
       "tags": [
         "#тюрьма",
         "#дружба",
-        "#совесть"
+        "совесть"
       ],
       "average_rating": 80
     },
@@ -71,7 +73,8 @@
       "description_url": "http://khkn.nj",
       "tags": [
         "#война",
-        "#смерть"
+        "#смерть",
+        "#жизнь"
       ],
       "average_rating": 95
     },
@@ -141,15 +144,6 @@
       "id": 7
     },
     {
-      "name": "рор",
-      "author": "ро",
-      "pages": "1",
-      "cover_url": "",
-      "description_url": "http://bfgfbf.hgh",
-      "tags": "#privet,#knig",
-      "id": 8
-    },
-    {
       "name": "Незнайка",
       "author": "Носов",
       "pages": "111",
@@ -161,6 +155,20 @@
         "#girls"
       ],
       "id": 9
+    },
+    {
+      "id": 10,
+      "name": "Книжный вор 2",
+      "author": "Маркус Зусак",
+      "pages": 210,
+      "cover_url": "#",
+      "description_url": "http://khkn.nj",
+      "tags": [
+        "#дружба",
+        "#смерть",
+        "#родители"
+      ],
+      "average_rating": 95
     }
   ]
 }
