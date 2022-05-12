@@ -14,15 +14,17 @@
         </div>
         <div class="col-md-auto">
           <form class="form-inline">
+
             {{input type="search" value=searchBook class="form-control mr-2 search-long" aria-label="Найти по полям" placeholder="Найти по полям"}}
-            {{!-- <input class="form-control mr-2 search-long" type="search" placeholder="Найти по полям" aria-label="Найти по полям"> --}}
+
             <button class="btn btn-primary my-2" onclick={{action "searchBook"}}>Найти</button>
           </form>
         </div>
         <div class="col-md-auto">
           <form class="form-inline">
+
             {{input type="search" value=searchTag class="form-control mr-2" aria-label="Найти по тегам" placeholder="Найти по тегам"}}
-            {{!-- <input class="form-control mr-2" value=searchTag type="search" placeholder="Поиск по тегам" aria-label="Найти по тегам"> --}}
+
             <button class="btn btn-primary my-2" onclick={{action "searchTag"}}>Поиск</button>
           </form>
         </div>
@@ -31,7 +33,9 @@
         {{#each model as |book|}}
         <div class="col mb-4">
             <div class="card">
-            <img src="images/book-cover.jpg" class="card-img-top" alt="Обложка книги">
+
+            <img src="{{book.cover_url}}" width="400" height="266" class="card-img-top" alt="Обложка книги {{book.name}}">
+            
             <div class="card-header">
                 <h5 class="card-title">{{book.name}}</h5>
             </div>
@@ -63,7 +67,7 @@
             <div class="card-footer">
               <div class="row">
                 <div class="col">
-                  <a href="#" class="card-link line-offset">Описание</a>
+                  <a href="{{book.description_url}}" class="card-link line-offset">Описание</a>
                 </div>
                 <div class="col text-right">
                   {{#link-to "edit-book" book.id class="btn btn-edit"}}

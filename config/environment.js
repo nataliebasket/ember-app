@@ -54,5 +54,7 @@ module.exports = function(environment) {
     // here you can enable a production-specific feature
   }
 
+  ENV.fileUploadURL = ENV.backendURL + '/FileUpload';
+
   return ENV;
 };

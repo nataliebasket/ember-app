@@ -16,19 +16,26 @@ export default Controller.extend({
     async editBook(e) {
       e.preventDefault();
 
+      set(this, 'isUploadingFile', true);
+      const uploadData = get(this, 'uploadData');
+
       await this.get("dataService").updateBook({
           name: this.get('model.name'),
           author: this.get('model.author'),
           pages: this.get('model.pages'),
           id: this.get('model.id'),
-          cover_url: this.get('model.cover_url'),
           description_url: this.get('model.description_url'),
-          // tags: this.get('model.tags').split(','),
           tags: this.get('tags'),
+          cover_url: '',
+        }, uploadData);
 
-        });
+      set(this, 'isUploadingFile', false);
 
       this.transitionToRoute('books');
+    },
+
+    changeUploadData(uploadData) {
+      set(this, 'uploadData', uploadData); //синхронизация контроллера с компонентом
     },
 
     cancelSaveBook () {

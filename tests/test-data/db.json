@@ -10,7 +10,7 @@
       "id": 2,
       "last_name": "Legolas",
       "first_name": "Elf",
-      "patronymic": "Fasterrrr"
+      "patronymic": "Faster"
     },
     {
       "id": 3,
@@ -59,12 +59,12 @@
       "name": "Побег из шоушенка",
       "author": "Кинг Стивен",
       "pages": "333",
-      "cover_url": "#",
+      "cover_url": "/uploads/avatar_shoushenk-1652377533395.jpg",
       "description_url": "http://gfgf",
       "tags": [
-        "#тюрьма",
-        "#дружба",
-        "совесть"
+        "#смерть",
+        "#жизнь",
+        "#дружба"
       ],
       "average_rating": 80
     },
@@ -73,12 +73,11 @@
       "name": "Книжный вор",
       "author": "Маркус Зусак",
       "pages": 420,
-      "cover_url": "#",
+      "cover_url": "/uploads/avatar_book-1652377741446.jpg",
       "description_url": "http://khkn.nj",
       "tags": [
-        "#война",
         "#смерть",
-        "#жизнь"
+        "#дружба"
       ],
       "average_rating": 95
     },
@@ -87,13 +86,11 @@
       "name": "Повелитель мух",
       "author": "Уильям Голдинг",
       "pages": 320,
-      "cover_url": "#",
+      "cover_url": "/uploads/avatar_fly-1652377881461.jpg",
       "description_url": "http://jhjuh.tu",
       "tags": [
-        "#мальчики",
-        "#милосердие",
-        "#любовь",
-        "#роман"
+        "#смерть",
+        "#дружба"
       ],
       "average_rating": 85
     },
@@ -102,13 +99,11 @@
       "name": "Хоббит или туда и обратно",
       "author": "Дж. Р. Р. Толкиен",
       "pages": 450,
-      "cover_url": "#",
-      "description_url": "#",
+      "cover_url": "/uploads/avatar_hobbit-1652378094360.jpg",
+      "description_url": "http://dfdvsdf.ff",
       "tags": [
-        "#фантастика",
-        "#дружба",
-        "#дракон",
-        "#кольцо"
+        "#смерть",
+        "#дружба"
       ],
       "average_rating": 90
     },
@@ -117,11 +112,10 @@
       "name": "Не отпускай меня",
       "author": "Исигуро Кадзуо",
       "pages": 200,
-      "cover_url": "#",
-      "description_url": "#",
+      "cover_url": "/uploads/avatar_go-1652377975381.jpg",
+      "description_url": "http://dgffdv.efe",
       "tags": [
-        "#любовь",
-        "#книга",
+        "#смерть",
         "#дружба"
       ],
       "average_rating": 65
@@ -131,7 +125,7 @@
       "name": "Имя розы",
       "author": "У. Эко",
       "pages": 180,
-      "cover_url": "#",
+      "cover_url": "/uploads/avatar_rosa-1652375426672.jpg",
       "description_url": "http://rosa.ru",
       "tags": [
         "#книга",
@@ -140,38 +134,18 @@
       "average_rating": 60
     },
     {
-      "name": "Незнайка",
-      "author": "Носов",
-      "pages": "111",
-      "cover_url": "http://neznaika.ru",
-      "description_url": "http://123.ru",
-      "tags": [],
-      "id": 9
-    },
-    {
-      "id": 10,
-      "name": "Книжный вор 2",
-      "author": "Маркус Зусак",
-      "pages": 210,
-      "cover_url": "#",
-      "description_url": "http://khkn.nj",
-      "tags": [
-        "#дружба",
-        "#смерть",
-        "#родители"
-      ],
-      "average_rating": 95
-    },
-    {
-      "name": "Айболит",
-      "author": "Чуковский",
+      "name": "Айболит и его друзья",
+      "author": "Чуковский Корней",
       "pages": "110",
       "description_url": "http://aibolit.ru",
       "tags": [
+        "#жизнь",
+        "#дружба",
         "#звери",
-        "#доктор"
+        "#крокодил"
       ],
-      "id": 11
+      "id": 11,
+      "cover_url": ""
     }
   ]
 }

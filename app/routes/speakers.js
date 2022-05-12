@@ -10,14 +10,7 @@ export default Route.extend({
     }
   },
 
-  // actions: {
-  //   reloadPage() {
-  //     this.refresh();
-  //   },
-  // },
-
   model ({ search }) {
-    // console.log(search);
     return search ? this.get("dataService").getSpeakers(search) : this.get("dataService").getSpeakers();
   }
 });
