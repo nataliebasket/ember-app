@@ -23,7 +23,11 @@ export default Component.extend({
   },
 
   didReceiveAttrs() {
-    const tags = get(this, 'tags');
+    // const tags = get(this, 'tags');
+
+    let tags = get(this, 'tags'); // !!! правильно ли так делать?
+    if (tags === undefined) tags = [];
+
     assert('Passed tags must be an array', typeOf(tags) === 'array');
     set(this, '_tags', [...tags]);
   },

@@ -47,6 +47,10 @@
       "first_name": "rtr",
       "patronymic": "rtrt",
       "id": 8
+    },
+    {
+      "patronymic": "",
+      "id": 9
     }
   ],
   "books": [
@@ -128,32 +132,20 @@
       "author": "У. Эко",
       "pages": 180,
       "cover_url": "#",
-      "description_url": "#",
+      "description_url": "http://rosa.ru",
       "tags": [
-        "#книга"
+        "#книга",
+        "цветок"
       ],
       "average_rating": 60
     },
     {
       "name": "Незнайка",
       "author": "Носов",
-      "pages": "100",
-      "cover_url": "",
-      "description_url": "http://gfgfg.ry",
-      "tags": "#book,#game",
-      "id": 7
-    },
-    {
-      "name": "Незнайка",
-      "author": "Носов",
       "pages": "111",
       "cover_url": "http://neznaika.ru",
-      "description_url": "Книга о дружбе",
-      "tags": [
-        "#friends",
-        "#kniga",
-        "#girls"
-      ],
+      "description_url": "http://123.ru",
+      "tags": [],
       "id": 9
     },
     {
@@ -169,6 +161,17 @@
         "#родители"
       ],
       "average_rating": 95
+    },
+    {
+      "name": "Айболит",
+      "author": "Чуковский",
+      "pages": "110",
+      "description_url": "http://aibolit.ru",
+      "tags": [
+        "#звери",
+        "#доктор"
+      ],
+      "id": 11
     }
   ]
 }
