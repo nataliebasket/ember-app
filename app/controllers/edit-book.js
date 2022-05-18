@@ -29,6 +29,17 @@ export default Controller.extend({
           cover_url: '',
         }, uploadData);
 
+      // let bookModel =this.get('model');
+      // bookModel.set('name', this.get('model.name'));
+      // bookModel.set('author', this.get('model.author'));
+      // bookModel.set('pages', this.get('model.pages'));
+      // bookModel.set('id', this.get('model.id'));
+      // bookModel.set('description_url', this.get('model.description_url'));
+      // bookModel.set('tags', this.get('tags'));
+      // bookModel.set('cover_url', '');
+
+      // await bookModel.save();
+
       set(this, 'isUploadingFile', false);
 
       this.transitionToRoute('books');

@@ -10,7 +10,8 @@ export default Controller.extend({
 
   actions: {
     deleteBook(book) {
-      this.get("dataService").deleteBook(book);
+      // this.get("dataService").deleteBook(book);
+      book.destroyRecord();
     },
 
     searchBook(e) {

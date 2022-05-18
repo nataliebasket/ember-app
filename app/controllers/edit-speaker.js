@@ -8,16 +8,19 @@ export default Controller.extend({
     async saveSpeaker(speaker) {
       // e.preventDefault();
 
-      await this.get("dataService").updateSpeaker({
-        last_name: speaker.last_name,
-        first_name: speaker.first_name,
-        patronymic: speaker.patronymic,
-        id: speaker.id,
-          // last_name: this.get('model.last_name'),
-          // first_name: this.get('model.first_name'),
-          // patronymic: this.get('model.patronymic'),
-          // id: this.get('model.id')
-        });
+      // await this.get("dataService").updateSpeaker({
+      //   lastName: speaker.lastName,
+      //   firstName: speaker.firstName,
+      //   patronymic: speaker.patronymic,
+      //   id: speaker.id,
+      //   });
+
+      let speakerModel = this.get('model');
+      speakerModel.set('lastName', speaker.lastName);
+      speakerModel.set('firstName', speaker.firstName);
+      speakerModel.set('patronymic', speaker.patronymic);
+
+      await speakerModel.save(); //уходит запрос на сервер - промис
 
       this.transitionToRoute('speakers');
     },

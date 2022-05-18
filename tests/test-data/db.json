@@ -2,55 +2,63 @@
   "speakers": [
     {
       "id": 1,
-      "last_name": "Baggins",
-      "first_name": "Frodo",
-      "patronymic": "Shir"
+      "type": "speaker",
+      "lastName": "Carter",
+      "firstName": "Nick",
+      "patronymic": "Bsb",
+      "reportId": 1
     },
     {
       "id": 2,
-      "last_name": "Legolas",
-      "first_name": "Elf",
-      "patronymic": "Faster"
+      "type": "speaker",
+      "lastName": "McLean",
+      "firstName": "Alexandr",
+      "patronymic": "Bsb",
+      "reportId": 2
     },
     {
       "id": 3,
-      "last_name": "Elfia",
-      "first_name": "Galadriel",
-      "patronymic": "White"
+      "type": "speaker",
+      "lastName": "Littrel",
+      "firstName": "Brian",
+      "patronymic": "Bsb",
+      "reportId": 3
     },
     {
       "id": 4,
-      "last_name": "Baggins",
-      "first_name": "Bilbo",
-      "patronymic": "Shir"
+      "type": "speaker",
+      "lastName": "Richardson",
+      "firstName": "Kevin",
+      "patronymic": "Bsb",
+      "reportId": 4
     },
     {
       "id": 5,
-      "last_name": "Mag",
-      "first_name": "Gendalf",
-      "patronymic": "Gray"
+      "type": "speaker",
+      "lastName": "Dorough",
+      "firstName": "Howie",
+      "patronymic": "Bsb"
     },
     {
-      "last_name": "Sergeev",
-      "first_name": "Sergey",
-      "patronymic": "Sergeevich",
-      "id": 6
-    },
-    {
-      "last_name": "Popova",
-      "first_name": "Anna",
-      "patronymic": "Ivanovna",
-      "id": 7
-    },
-    {
-      "last_name": "rttr",
-      "first_name": "rtr",
-      "patronymic": "rtrt",
-      "id": 8
-    },
-    {
-      "patronymic": "",
+      "lastName": "Петрова",
+      "firstName": "Кристина",
+      "patronymic": "Сергеевна",
+      "type": "speaker",
       "id": 9
+    },
+    {
+      "lastName": "Королев",
+      "firstName": "Дмитрий",
+      "patronymic": "Николаевич",
+      "report": null,
+      "id": 10
+    },
+    {
+      "lastName": "eeeeee",
+      "firstName": "eeeee",
+      "patronymic": "eeeeeee",
+      "report": null,
+      "id": 11
     }
   ],
   "books": [
@@ -58,7 +66,7 @@
       "id": 1,
       "name": "Побег из шоушенка",
       "author": "Кинг Стивен",
-      "pages": "333",
+      "pages": 333,
       "cover_url": "/uploads/avatar_shoushenk-1652377533395.jpg",
       "description_url": "http://gfgf",
       "tags": [
@@ -66,7 +74,8 @@
         "#жизнь",
         "#дружба"
       ],
-      "average_rating": 80
+      "average_rating": 80,
+      "reportId": 1
     },
     {
       "id": 2,
@@ -79,7 +88,8 @@
         "#смерть",
         "#дружба"
       ],
-      "average_rating": 95
+      "average_rating": 95,
+      "reportId": 2
     },
     {
       "id": 3,
@@ -92,7 +102,8 @@
         "#смерть",
         "#дружба"
       ],
-      "average_rating": 85
+      "average_rating": 85,
+      "reportId": 3
     },
     {
       "id": 4,
@@ -105,7 +116,8 @@
         "#смерть",
         "#дружба"
       ],
-      "average_rating": 90
+      "average_rating": 90,
+      "reportId": 4
     },
     {
       "id": 5,
@@ -136,16 +148,86 @@
     {
       "name": "Айболит и его друзья",
       "author": "Чуковский Корней",
-      "pages": "110",
+      "pages": 111,
       "description_url": "http://aibolit.ru",
       "tags": [
-        "#жизнь",
         "#дружба",
         "#звери",
         "#крокодил"
       ],
       "id": 11,
-      "cover_url": ""
+      "cover_url": "/uploads/avatar_cat-1652881822618.jpg",
+      "average_rating": 10,
+      "speaker": null,
+      "report": null
+    },
+    {
+      "name": "uuyu",
+      "author": "ggygyg",
+      "pages": 1234555555,
+      "cover_url": "/uploads/avatar_cats-1652889915873.jpg",
+      "description_url": "http://juhu",
+      "tags": [
+        "ugygh"
+      ],
+      "average_rating": null,
+      "report": null,
+      "id": 12
+    },
+    {
+      "name": "wewew",
+      "author": "wewew",
+      "pages": 123,
+      "cover_url": "/uploads/littlebook-1652894472225.jpg",
+      "description_url": "http://hg",
+      "tags": [
+        "yyy"
+      ],
+      "average_rating": null,
+      "reportId": null,
+      "id": 14
+    }
+  ],
+  "reports": [
+    {
+      "id": 1,
+      "date": "2011-05-13T14:48:00.000Z",
+      "points": 30,
+      "url_presentation": "123.ru",
+      "url_video": "123.ru"
+    },
+    {
+      "id": 2,
+      "date": "2011-05-13T14:48:00.000Z",
+      "points": 40,
+      "url_presentation": "456.ru",
+      "url_video": "456.ru"
+    },
+    {
+      "id": 3,
+      "date": "2022-05-13T14:48:00.000Z",
+      "points": 50,
+      "url_presentation": "123.ru",
+      "url_video": "123.ru"
+    },
+    {
+      "id": 4,
+      "date": "2022-05-13T14:48:00.000Z",
+      "points": 60,
+      "url_presentation": "456.ru",
+      "url_video": "456.ru"
+    }
+  ],
+  "meetings": [
+    {
+      "id": 1,
+      "date": "2011-05-13T14:48:00.000Z",
+      "reportId": 1
+    },
+    {
+      "id": 2,
+      "date": "2022-05-13T14:48:00.000Z",
+      "reportId": 2
     }
   ]
 }

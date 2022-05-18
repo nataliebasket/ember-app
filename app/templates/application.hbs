@@ -16,7 +16,9 @@
         <a class="nav-link" href="index.html">Рабочий стол <span class="sr-only">(текущий)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="meetings.html">Встречи клуба</a>
+        {{#link-to "meetings" class="nav-link"}}
+          Встречи клуба
+        {{/link-to}}
       </li>
       <li class="nav-item">
         {{#link-to "books" class="nav-link"}}

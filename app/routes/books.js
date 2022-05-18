@@ -14,6 +14,8 @@ export default Route.extend({
   },
 
   model ({ search, tag }) {
-    return (search || tag) ? this.get("dataService").getBooks(search, tag) : this.get("dataService").getBooks();
+    // return this.get('store').findAll ('book');
+    return this.get('store').query('book', {q: search, tags_like: tag});
+    // return (search || tag) ? this.get("dataService").getBooks(search, tag) : this.get("dataService").getBooks();
   }
 });

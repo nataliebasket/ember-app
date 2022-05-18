@@ -9,7 +9,8 @@ export default Controller.extend({
 
   actions: {
     deleteSpeaker(speaker) {
-      this.get("dataService").deleteSpeaker(speaker);
+      // this.get("dataService").deleteSpeaker(speaker);
+      speaker.destroyRecord();
     },
 
     searchSpeaker(e) {

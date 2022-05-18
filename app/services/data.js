@@ -9,16 +9,26 @@ export default Service.extend({
      this.set('books', A());
   },
 
-  async getSpeakers(search) {
+  // async getSpeakers(search) {
+  //   let queryParams = '';
+  //   if (search) {
+  //     queryParams = `?q=${search}`;
+  //   }
+  //   let response = await fetch(`${ENV.backendURL}/speakers${queryParams}`);
+  //   let speakers = await response.json();
+  //   this.get('speakers').clear();
+  //   this.get('speakers').pushObjects(speakers);
+  //   return this.get('speakers');
+  // },
+
+  async getSpeakers(speak, search) {
     let queryParams = '';
     if (search) {
       queryParams = `?q=${search}`;
     }
-    let response = await fetch(`${ENV.backendURL}/speakers${queryParams}`);
-    let speakers = await response.json();
-    this.get('speakers').clear();
-    this.get('speakers').pushObjects(speakers);
-    return this.get('speakers');
+    // let response = await fetch(`${ENV.backendURL}/speakers${queryParams}`);
+    // let speakers = await response.json();
+    return this.findAll (`${ENV.backendURL}/speakers${queryParams}`);
   },
 
   async getBooks(search, tag) {
@@ -59,10 +69,10 @@ export default Service.extend({
     return fetch(`${ENV.backendURL}/speakers/${speaker.id}`, { method: 'DELETE'});
   },
 
-  deleteBook(book) {
-    this.get('books').removeObject(book);
-    return fetch(`${ENV.backendURL}/books/${book.id}`, { method: 'DELETE'});
-  },
+  // deleteBook(book) {
+  //   this.get('books').removeObject(book);
+  //   return fetch(`${ENV.backendURL}/books/${book.id}`, { method: 'DELETE'});
+  // },
 
   createSpeaker(speaker) {
     return fetch(`${ENV.backendURL}/speakers/`, {
@@ -75,13 +85,6 @@ export default Service.extend({
   },
 
   createBook(book, uploadData) {
-    // return fetch(`${ENV.backendURL}/books/`, {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify(book)
-    // });
     return new Promise(async (resolve, reject) => {
       try {
         const savedBookPromise = await fetch(`${ENV.backendURL}/books`, {

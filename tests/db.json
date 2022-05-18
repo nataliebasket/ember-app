@@ -1,0 +1,200 @@
+{
+  "speakers": [
+    {
+      "id": 1,
+      "type": "speaker",
+      "lastName": "Carter",
+      "firstName": "Nick",
+      "patronymic": "Bsb",
+      "reportId": 1
+    },
+    {
+      "id": 2,
+      "type": "speaker",
+      "lastName": "McLean",
+      "firstName": "Alexandr",
+      "patronymic": "Bsb",
+      "reportId": 2
+    },
+    {
+      "id": 3,
+      "type": "speaker",
+      "lastName": "Littrel",
+      "firstName": "Brian",
+      "patronymic": "Bsb",
+      "reportId": 3
+    },
+    {
+      "id": 4,
+      "type": "speaker",
+      "lastName": "Richardson",
+      "firstName": "Kevin",
+      "patronymic": "Bsb",
+      "reportId": 4
+    },
+    {
+      "id": 5,
+      "type": "speaker",
+      "lastName": "Dorough",
+      "firstName": "Howie",
+      "patronymic": "Bsb"
+    },
+    {
+      "lastName": "Петрова",
+      "firstName": "Кристина",
+      "patronymic": "Сергеевна",
+      "type": "speaker",
+      "id": 9
+    },
+    {
+      "lastName": "Королев",
+      "firstName": "Дмитрий",
+      "patronymic": "Николаевич",
+      "report": null,
+      "id": 10
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "name": "Побег из шоушенка",
+      "author": "Кинг Стивен",
+      "pages": 333,
+      "cover_url": "/uploads/avatar_shoushenk-1652377533395.jpg",
+      "description_url": "http://gfgf",
+      "tags": [
+        "#смерть",
+        "#жизнь",
+        "#дружба"
+      ],
+      "average_rating": 80,
+      "reportId": 1
+    },
+    {
+      "id": 2,
+      "name": "Книжный вор",
+      "author": "Маркус Зусак",
+      "pages": 420,
+      "cover_url": "/uploads/avatar_book-1652377741446.jpg",
+      "description_url": "http://khkn.nj",
+      "tags": [
+        "#смерть",
+        "#дружба"
+      ],
+      "average_rating": 95,
+      "reportId": 2
+    },
+    {
+      "id": 3,
+      "name": "Повелитель мух",
+      "author": "Уильям Голдинг",
+      "pages": 320,
+      "cover_url": "/uploads/avatar_fly-1652377881461.jpg",
+      "description_url": "http://jhjuh.tu",
+      "tags": [
+        "#смерть",
+        "#дружба"
+      ],
+      "average_rating": 85,
+      "reportId": 3
+    },
+    {
+      "id": 4,
+      "name": "Хоббит или туда и обратно",
+      "author": "Дж. Р. Р. Толкиен",
+      "pages": 450,
+      "cover_url": "/uploads/avatar_hobbit-1652378094360.jpg",
+      "description_url": "http://dfdvsdf.ff",
+      "tags": [
+        "#смерть",
+        "#дружба"
+      ],
+      "average_rating": 90,
+      "reportId": 4
+    },
+    {
+      "id": 5,
+      "name": "Не отпускай меня",
+      "author": "Исигуро Кадзуо",
+      "pages": 200,
+      "cover_url": "/uploads/avatar_go-1652377975381.jpg",
+      "description_url": "http://dgffdv.efe",
+      "tags": [
+        "#смерть",
+        "#дружба"
+      ],
+      "average_rating": 65
+    },
+    {
+      "id": 6,
+      "name": "Имя розы",
+      "author": "У. Эко",
+      "pages": 180,
+      "cover_url": "/uploads/avatar_rosa-1652375426672.jpg",
+      "description_url": "http://rosa.ru",
+      "tags": [
+        "#книга",
+        "цветок"
+      ],
+      "average_rating": 60
+    },
+    {
+      "name": "Айболит и его друзья",
+      "author": "Чуковский Корней",
+      "pages": 111,
+      "description_url": "http://aibolit.ru",
+      "tags": [
+        "#дружба",
+        "#звери",
+        "#крокодил"
+      ],
+      "id": 11,
+      "cover_url": "",
+      "average_rating": 10,
+      "speaker": null,
+      "report": null
+    }
+  ],
+  "reports": [
+    {
+      "id": 1,
+      "date": "01.01.2022",
+      "points": 30,
+      "url_presentation": "123.ru",
+      "url_video": "123.ru"
+    },
+    {
+      "id": 2,
+      "date": "01.01.2022",
+      "points": 40,
+      "url_presentation": "456.ru",
+      "url_video": "456.ru"
+    },
+    {
+      "id": 3,
+      "date": "02.02.2022",
+      "points": 50,
+      "url_presentation": "123.ru",
+      "url_video": "123.ru"
+    },
+    {
+      "id": 4,
+      "date": "02.02.2022",
+      "points": 60,
+      "url_presentation": "456.ru",
+      "url_video": "456.ru"
+    }
+  ],
+  "meetings": [
+    {
+      "id": 1,
+      "date": "01.01.2022",
+      "reportId": 1
+    },
+    {
+      "id": 2,
+      "date": "02.02.2022",
+      "reportId": 2
+    }
+  ]
+}
