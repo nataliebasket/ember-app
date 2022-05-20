@@ -5,5 +5,5 @@ export default DS.Model.extend({
   firstName: DS.attr('string'),
   patronymic: DS.attr('string'),
 
-  report: DS.belongsTo('report'),
+  reports: DS.hasMany('report')
 });

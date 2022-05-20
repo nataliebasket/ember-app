@@ -9,5 +9,5 @@ export default DS.Model.extend({
   tags: DS.attr(),
   average_rating: DS.attr('number'),
 
-  report: DS.belongsTo('report'),
+  reports: DS.hasMany('report')
 });

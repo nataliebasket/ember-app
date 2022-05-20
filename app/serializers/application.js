@@ -20,12 +20,12 @@ export default DS.JSONSerializer.extend({
     return this._super(...arguments);
   },
 
-  // serializeBelongsTo(snapshot, json, relationship) {
-  //   // super.serializeBelongsTo(...arguments);
-  //   let key = relationship.key;
-  //   let belongsTo = snapshot.belongsTo(key);
+  serializeBelongsTo(snapshot, json, relationship) {
+    // super.serializeBelongsTo(...arguments);
+    let key = relationship.key;
+    let belongsTo = snapshot.belongsTo(key);
 
-  //   key = this.keyForRelationship ? this.keyForRelationship(key, "belongsTo", "serialize") : key;
-  //   json[key] = isNone(belongsTo) ? belongsTo : parseInt(belongsTo.record.get('id'));
-  // }
+    key = this.keyForRelationship ? this.keyForRelationship(key, "belongsTo", "serialize") : key;
+    json[key] = isNone(belongsTo) ? belongsTo : parseInt(belongsTo.record.get('id'));
+  }
 });

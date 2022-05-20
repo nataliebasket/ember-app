@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  date: DS.attr('data'),
+  date: DS.attr('date-string'),
 
-  report: DS.belongsTo('report'),
+  reports: DS.hasMany('report')
 });
