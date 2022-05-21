@@ -6,7 +6,7 @@
     <title>FlexberryEmber</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="{{rootURL}}js/jquery-3.5.1.slim.min.js" refer></script>
     {{content-for "head"}}
 
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
@@ -19,9 +19,13 @@
 
     {{content-for "body-footer"}}
 
-    <script src="{{rootURL}}js/jquery-3.5.1.slim.min.js"></script>
     <script src="{{rootURL}}assets/vendor.js"></script>
     <script src="{{rootURL}}assets/flexberry-ember.js"></script>
+
+    <script src="{{rootURL}}js/vendor/jquery.ui.widget.js"></script>
+    <script src="{{rootURL}}js/jquery.iframe-transport.js"></script>
+    <script src="{{rootURL}}js/jquery.fileupload.js"></script>
+    <script src="{{rootURL}}js/jquery.fileupload-process.js"></script>
 
     <script src="{{rootURL}}js/popper.min.js"></script>
     <script src="{{rootURL}}js/bootstrap.bundle.min.js"></script>
@@ -31,23 +35,15 @@
 	  <script src="{{rootURL}}js/bootstrap-datepicker.ru.min.js"></script>
 	  <script src="{{rootURL}}js/bootstrap-select.min.js"></script>
 
-
-
-    <script src="{{rootURL}}js/vendor/jquery.ui.widget.js"></script>
-    <script src="{{rootURL}}js/jquery.iframe-transport.js"></script>
-    <script src="{{rootURL}}js/jquery.fileupload.js"></script>
-    <script src="{{rootURL}}js/jquery.fileupload-process.js"></script>
-
     <script type="text/javascript">
       $(function () {
         $('.datepicker').datepicker({
           clearBtn: true,
           format: "dd.mm.yyyy",
           language: "ru",
-            autoclose: true
+          autoclose: true
         });
       });
-      $('select').selectpicker();
     </script>
   </body>
 </html>

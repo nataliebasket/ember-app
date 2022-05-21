@@ -7,7 +7,7 @@
 .bootstrap-select>select.bs-select-hidden,
 select.bs-select-hidden,
 select.selectpicker {
-  display: none !important
+  display: block !important /*изменено с none! */
 }
 
 .bootstrap-select {

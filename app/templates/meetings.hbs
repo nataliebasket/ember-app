@@ -9,24 +9,22 @@
           </svg>
         </button>
       </div>
-      {{!-- <div class="col-md-3 align-top">
+      <div class="col-md-3 align-top">
         <h5>Спикер</h5>
-        <select class="selectpicker form-control dropdown-filter-control" data-live-search="true" data-size="5" title="Спикер...">
+        {{!-- <select class="selectpicker form-control dropdown-filter-control" data-live-search="true" data-size="5" title="Спикер...">
           {{#each model.speakers as |speaker|}}
               <option>{{speaker.lastName}}</option>
           {{/each}}
-        </select>
-      </div> --}}
-      	<div class="col-md-3 align-top">
-					<h5>Спикеррр</h5>
-					<select class="selectpicker form-control dropdown-filter-control" data-live-search="true" data-size="5" title="Спикер...">
-						<option>Фамилия имя</option>
-						<option>Фамилия имя</option>
-						<option>Фамилия имя</option>
-						<option>Фамилия имя</option>
-						<option>Фамилия имя</option>
-					</select>
-				</div>
+        </select> --}}
+
+
+        {{#power-select options=model.speakers selected=selectedSpeaker
+          class="selectpicker form-control dropdown-filter-control"
+          onchange=(action "changeSpeaker") allowClear=true searchField="lastName" as |speaker|
+        }}
+          {{speaker.lastName}} {{speaker.firstName}}
+        {{/power-select}}
+      </div>
       <div class="col-md-3">
         <h5>Книга</h5>
         <select class="selectpicker form-control dropdown-filter-control" data-live-search="true" data-size="5" title="Книга...">
@@ -66,7 +64,7 @@
     </div>
      {{#each model.meetings as |meeting|}}
     <div class="border border-dark rounded p-4 mb-4">
-      <h4>Дата встречи {{meeting.date}}</h4>
+      <h4>Дата встречи {{meeting.date}} {{meeting.id}}</h4>
       <div class="row h-100 justify-content-between mb-4">
         <div class="col-md-auto">
           <div class="datepicker datepicker-meeting date input-group p-0">
@@ -82,11 +80,13 @@
           </div>
         </div>
         <div class="col-md-auto">
+          {{!-- {{#link-to "edit-meeting" meeting class="btn btn-edit"}} --}}
           <button type="button" class="btn btn-edit" onclick="javascript:location='edit-meeting.html'">
             <svg viewBox="0 0 16 16" class="bi bi-pencil card-button" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5L13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175l-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
             </svg>
           </button>
+          {{!-- {{/link-to}} --}}
           <button type="button" class="btn btn-trash">
             <svg viewBox="0 0 16 16" class="bi bi-trash card-button" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
@@ -158,7 +158,6 @@
             {{#link-to 'meetings' (query-params page=page) class="page-link"}}
                {{page}}
             {{/link-to}}
-            {{!-- {{link-to page "meetings" (query-params page=page) class="page-link"}} --}}
           </li>
         {{/each}}
 

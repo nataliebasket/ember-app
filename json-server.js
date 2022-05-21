@@ -108,6 +108,21 @@ function responseInterceptor(req, res, next) {
 server.use(responseInterceptor);
 //delete record end
 
+// server.use((request, response, next) => {
+//   const speaker = Number(request.query.speaker);
+//   if (request.method === 'GET' && request.path === '/meetings?_embed=reports' && !Number.isNaN(speaker)) {
+//     const reports = router.db.get('reports').filter((b) => b.speakerId === speaker).map((speaker) => {
+//       report.reports = router.db.get('reports').filter((r) => r.reportId === meeting.id).value();
+
+//       return reports;
+//     }).value();
+
+//     response.json(meetings);
+//   } else {
+//     next();
+//   }
+// });
+
 // Use default router
 server.use(router)
 

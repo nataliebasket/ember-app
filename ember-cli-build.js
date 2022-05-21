@@ -10,14 +10,17 @@ module.exports = function(defaults) {
       'importBootstrapCSS': true
     }
   });
+  // app.import('vendor/jquery-3.5.1.slim.min.js');
+
 
   app.import('vendor/bootstrap.min.css');
   app.import('vendor/bootstrap-select.min.css');
   app.import('vendor/tagsinput.css');
   app.import('vendor/bootstrap-datepicker.css');
 
-  // app.import('public/js/jquery-3.5.1.slim.min.js');
-  // app.import('public/js/bootstrap-select.min.js');
+
+
+  // app.import('vendor/bootstrap-select.min.js');
 
   const jqueryFiles = funnel('node_modules/blueimp-file-upload/js', {
     files: ['**/*.js'],

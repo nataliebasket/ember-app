@@ -5,5 +5,9 @@ export default DS.Model.extend({
   firstName: DS.attr('string'),
   patronymic: DS.attr('string'),
 
-  reports: DS.hasMany('report')
+  reports: DS.hasMany('report'),
+
+  // fullName: getComputedStyle('firstName', 'lastName', function() {
+  //   return `${this.get('firstName')} ${this.get('lastName')}`;
+  // }),
 });

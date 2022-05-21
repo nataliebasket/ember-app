@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('create-speaker', {path: '/create-speaker'});
   this.route('create-book');
   this.route('meetings');
+  this.route('edit-meeting');
 });
 
 export default Router;

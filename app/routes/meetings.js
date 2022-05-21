@@ -11,16 +11,23 @@ export default Route.extend({
     },
     page: {
       refreshModel: true
+    },
+    speaker:
+    {
+      refreshModel: true
     }
   },
 
 
-  model({ page }) {
+  model({ page, speaker }) {
     const query = {
       _page: page,
       _limit: PER_PAGE,
     };
 
+    if (speaker) {
+      query.speaker = speaker;
+    }
 
     return RSVP.hash({
       books: this.store.findAll('book'),
@@ -28,7 +35,6 @@ export default Route.extend({
       meetings: this.store.query('meeting', query)
     });
 
-    // return this.get('store').query('meeting', query);
   },
 
   actions: {
@@ -36,10 +42,5 @@ export default Route.extend({
       return false;
     }
   },
-
-  // dataService: service('data'),
-  // model() {
-  //   return this.get('store').findAll ('meeting');
-  // }
 
 });

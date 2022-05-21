@@ -2,55 +2,45 @@
   "speakers": [
     {
       "id": 1,
-      "lastName": "Baggins",
-      "firstName": "Frodo",
-      "patronymic": "Shir"
+      "lastName": "Carter",
+      "firstName": "Nick",
+      "patronymic": "Bsb"
     },
     {
       "id": 2,
-      "lastName": "Legolas",
-      "firstName": "Elf",
-      "patronymic": "Faster"
+      "lastName": "McLean",
+      "firstName": "Alexandr",
+      "patronymic": "Bsb"
     },
     {
       "id": 3,
-      "lastName": "Elfia",
-      "firstName": "Galadriel",
-      "patronymic": "White"
+      "lastName": "Littrel",
+      "firstName": "Brian",
+      "patronymic": "Bsb"
     },
     {
       "id": 4,
-      "lastName": "Baggins",
-      "firstName": "Bilbo",
-      "patronymic": "Shir"
+      "lastName": "Richardson",
+      "firstName": "Kevin",
+      "patronymic": "Bsb"
     },
     {
       "id": 5,
-      "lastName": "Mag",
-      "firstName": "Gendalf",
-      "patronymic": "Gray"
+      "lastName": "Dorough",
+      "firstName": "Howie",
+      "patronymic": "Bsb"
     },
     {
-      "lastName": "Sergeev",
-      "firstName": "Sergey",
-      "patronymic": "Sergeevich",
+      "lastName": "Петрова",
+      "firstName": "Кристина",
+      "patronymic": "Сергеевна",
       "id": 6
     },
     {
-      "lastName": "Popova",
-      "firstName": "Anna",
-      "patronymic": "Ivanovna",
+      "lastName": "Королев",
+      "firstName": "Дмитрий",
+      "patronymic": "Николаевич",
       "id": 7
-    },
-    {
-      "lastName": "rttr",
-      "firstName": "rtr",
-      "patronymic": "rtrt",
-      "id": 8
-    },
-    {
-      "patronymic": "",
-      "id": 9
     }
   ],
   "books": [
@@ -58,7 +48,7 @@
       "id": 1,
       "name": "Побег из шоушенка",
       "author": "Кинг Стивен",
-      "pages": "333",
+      "pages": 333,
       "cover_url": "/uploads/avatar_shoushenk-1652377533395.jpg",
       "description_url": "http://gfgf",
       "tags": [
@@ -136,16 +126,177 @@
     {
       "name": "Айболит и его друзья",
       "author": "Чуковский Корней",
-      "pages": "110",
+      "pages": 111,
       "description_url": "http://aibolit.ru",
       "tags": [
-        "#жизнь",
         "#дружба",
         "#звери",
         "#крокодил"
       ],
+      "id": 7,
+      "cover_url": "/uploads/avatar_cat-1652881822618.jpg",
+      "average_rating": 10
+    },
+    {
+      "name": "Java Script",
+      "author": "Undefined",
+      "pages": 1000,
+      "description_url": "http://ghgh",
+      "tags": [
+        "js",
+        "javaScript",
+        "фронтенд"
+      ],
+      "cover_url": "/uploads/littlebook-1652903046677.jpg",
+      "id": 8
+    }
+  ],
+  "reports": [
+    {
+      "id": 1,
+      "date": "2011-05-13T14:48:00.000Z",
+      "points": 30,
+      "url_presentation": "123.ru",
+      "url_video": "123.ru",
+      "meetingId": 1,
+      "speakerId": 1,
+      "bookId": 1
+    },
+    {
+      "id": 2,
+      "date": "2011-05-13T14:48:00.000Z",
+      "points": 40,
+      "url_presentation": "456.ru",
+      "url_video": "456.ru",
+      "meetingId": 1,
+      "speakerId": 2,
+      "bookId": 2
+    },
+    {
+      "id": 3,
+      "date": "2022-05-13T14:48:00.000Z",
+      "points": 50,
+      "url_presentation": "123.ru",
+      "url_video": "123.ru",
+      "meetingId": 2,
+      "speakerId": 3,
+      "bookId": 3
+    },
+    {
+      "id": 4,
+      "date": "2022-02-13T14:48:00.000Z",
+      "points": 60,
+      "url_presentation": "456.ru",
+      "url_video": "456.ru",
+      "meetingId": 2,
+      "speakerId": 4,
+      "bookId": 4
+    },
+    {
+      "id": 5,
+      "date": "2033-03-03T14:48:00.000Z",
+      "points": 50,
+      "url_presentation": "123.ru",
+      "url_video": "123.ru",
+      "meetingId": 3,
+      "speakerId": 5,
+      "bookId": 5
+    },
+    {
+      "id": 6,
+      "date": "2033-03-03T14:48:00.000Z",
+      "points": 60,
+      "url_presentation": "456.ru",
+      "url_video": "456.ru",
+      "meetingId": 3,
+      "speakerId": 6,
+      "bookId": 6
+    },
+    {
+      "id": 7,
+      "date": "2044-04-04T14:48:00.000Z",
+      "points": 50,
+      "url_presentation": "123.ru",
+      "url_video": "123.ru",
+      "meetingId": 4,
+      "speakerId": 6,
+      "bookId": 2
+    },
+    {
+      "id": 8,
+      "date": "2044-04-04T14:48:00.000Z",
+      "points": 60,
+      "url_presentation": "456.ru",
+      "url_video": "456.ru",
+      "meetingId": 4,
+      "speakerId": 5,
+      "bookId": 6
+    },
+    {
+      "id": 9,
+      "date": "2055-05-05T14:48:00.000Z",
+      "points": 50,
+      "url_presentation": "123.ru",
+      "url_video": "123.ru",
+      "meetingId": 5,
+      "speakerId": 5,
+      "bookId": 2
+    },
+    {
+      "id": 10,
+      "date": "2055-05-05T14:48:00.000Z",
+      "points": 60,
+      "url_presentation": "456.ru",
+      "url_video": "456.ru",
+      "meetingId": 5,
+      "speakerId": 1,
+      "bookId": 3
+    },
+    {
       "id": 11,
-      "cover_url": ""
+      "date": "2066-06-06T14:48:00.000Z",
+      "points": 50,
+      "url_presentation": "123.ru",
+      "url_video": "123.ru",
+      "meetingId": 6,
+      "speakerId": 2,
+      "bookId": 6
+    },
+    {
+      "id": 12,
+      "date": "2066-06-06T14:48:00.000Z",
+      "points": 60,
+      "url_presentation": "456.ru",
+      "url_video": "456.ru",
+      "meetingId": 6,
+      "speakerId": 7,
+      "bookId": 6
+    }
+  ],
+  "meetings": [
+    {
+      "id": 1,
+      "date": "2011-01-01T12:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "date": "2022-02-22T12:00:00.000Z"
+    },
+    {
+      "id": 3,
+      "date": "2033-03-01T12:00:00.000Z"
+    },
+    {
+      "id": 4,
+      "date": "2044-04-22T12:00:00.000Z"
+    },
+    {
+      "id": 5,
+      "date": "2055-05-01T12:00:00.000Z"
+    },
+    {
+      "id": 6,
+      "date": "2066-06-22T12:00:00.000Z"
     }
   ]
 }

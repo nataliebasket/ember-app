@@ -4,8 +4,9 @@ import Controller from '@ember/controller';
 export const PER_PAGE = 2;
 
 export default Controller.extend({
-  queryParams: ['page'],
+  queryParams: ['page', 'speaker'],
   page: 1,
+  speaker: '',
 
   pages: computed('model.meetings.meta.total', function() {
     const total = Number(this.get('model.meetings.meta.total'));
@@ -17,6 +18,19 @@ export default Controller.extend({
       .fill()
       .map((value, index) => index + 1);
   }),
+
+  selectedSpeaker: computed('speaker', function() {
+    const speaker = this.get('speaker');
+
+    return speaker ? this.get('model.speakers').findBy('id', speaker) : null;
+  }),
+
+  actions: {
+    changeSpeaker(speaker) {
+      this.set('speaker', speaker ? speaker.get('id') : '');
+      // console.log(this.get('speaker'));
+    }
+  }
 
 
 });
