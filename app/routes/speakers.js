@@ -22,4 +22,5 @@ export default Route.extend({
     //   controller.set('isLoading', true);
     // }
   },
+
 });

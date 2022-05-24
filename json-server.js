@@ -108,20 +108,31 @@ function responseInterceptor(req, res, next) {
 server.use(responseInterceptor);
 //delete record end
 
-// server.use((request, response, next) => {
-//   const speaker = Number(request.query.speaker);
-//   if (request.method === 'GET' && request.path === '/meetings?_embed=reports' && !Number.isNaN(speaker)) {
-//     const reports = router.db.get('reports').filter((b) => b.speakerId === speaker).map((speaker) => {
-//       report.reports = router.db.get('reports').filter((r) => r.reportId === meeting.id).value();
+server.use((request, response, next) => {
+  const speaker = Number(request.query.speaker);
+  const book = Number(request.query.book);
 
-//       return reports;
-//     }).value();
+  if (request.method === 'GET' && request.path === '/meetings' && !Number.isNaN(speaker)) {
 
-//     response.json(meetings);
-//   } else {
-//     next();
-//   }
-// });
+    const arr = router.db.get('reports').filter(report => report.speakerId === speaker).value();
+    const mapArr = arr.map(report => report.meetingId);
+    const newMeetings = router.db.get('meetings').filter( meeting => mapArr.some(el => meeting.id === el)).value();
+    newMeetings.forEach((newMeeting) =>newMeeting.reports = router.db.get('reports').filter((report) => report.meetingId === newMeeting.id));
+
+
+    response.json(newMeetings);
+  } else if (request.method === 'GET' && request.path === '/meetings' && !Number.isNaN(book)) {
+
+    const arr = router.db.get('reports').filter(report => report.bookId === book).value();
+    const mapArr = arr.map(report => report.meetingId);
+    const newMeetings = router.db.get('meetings').filter( meeting => mapArr.some(el => meeting.id === el)).value();
+    newMeetings.forEach((newMeeting) =>newMeeting.reports = router.db.get('reports').filter((report) => report.meetingId === newMeeting.id));
+
+    response.json(newMeetings);
+  } else {
+    next();
+  }
+});
 
 // Use default router
 server.use(router)

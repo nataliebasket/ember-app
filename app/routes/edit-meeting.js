@@ -4,9 +4,11 @@ import { inject as service } from '@ember/service';
 export default Route.extend({
   dataService: service('data'),
 
-  // model({ id }) {
-  //   return this.get('store').findRecord('meeting', id);
-  // },
+  model() {
+    // return this.get('store').findRecord('meeting', id, {
+    //       include: 'reports',
+    // });
+  },
 
   // model( params ) {
   //   console.log(id);

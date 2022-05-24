@@ -6,20 +6,21 @@ import { PER_PAGE } from '../controllers/meetings';
 export default Route.extend({
 
   queryParams: {
-    search: {
-      refreshModel: true
-    },
     page: {
       refreshModel: true
     },
     speaker:
     {
       refreshModel: true
+    },
+    book:
+    {
+      refreshModel: true
     }
   },
 
 
-  model({ page, speaker }) {
+  model({ page, speaker, book }) {
     const query = {
       _page: page,
       _limit: PER_PAGE,
@@ -27,6 +28,10 @@ export default Route.extend({
 
     if (speaker) {
       query.speaker = speaker;
+    }
+
+    if (book) {
+      query.book = book;
     }
 
     return RSVP.hash({
@@ -40,7 +45,7 @@ export default Route.extend({
   actions: {
     loading() {
       return false;
-    }
+    },
   },
 
 });
