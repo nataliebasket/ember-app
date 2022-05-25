@@ -10,22 +10,23 @@ module.exports = function(defaults) {
       'importBootstrapCSS': true
     }
   });
-  // app.import('vendor/jquery-3.5.1.slim.min.js');
 
-
-  app.import('vendor/bootstrap.min.css');
-  app.import('vendor/bootstrap-select.min.css');
-  app.import('vendor/tagsinput.css');
-  app.import('vendor/bootstrap-datepicker.css');
-
-
-
-  // app.import('vendor/bootstrap-select.min.js');
 
   const jqueryFiles = funnel('node_modules/blueimp-file-upload/js', {
     files: ['**/*.js'],
     destDir: 'js'
   });
+
+  const js = funnel('node_modules/bootstrap/dist/js', {
+    files: ['**/*.js'],
+    destDir: 'bootstrap/js'
+  });
+
+  const css = funnel('node_modules/bootstrap/dist/css', {
+    files: ['*.min.css'],
+    destDir: 'bootstrap/css'
+  });
+
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
@@ -40,5 +41,5 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree(jqueryFiles);
+  return app.toTree([jqueryFiles, js, css]);
 };

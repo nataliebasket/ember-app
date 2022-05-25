@@ -8,7 +8,6 @@ export default Controller.extend({
   actions: {
     changeTags(newTags) {
       set(this, 'tags', [...newTags]);
-
       // eslint-disable-next-line no-console
       console.log(get(this, 'tags'));
     },

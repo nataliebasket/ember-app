@@ -149,6 +149,29 @@
       ],
       "cover_url": "/uploads/littlebook-1652903046677.jpg",
       "id": 8
+    },
+    {
+      "name": "рпр",
+      "author": "прпр",
+      "pages": "545",
+      "description_url": "прпр",
+      "tags": [
+        "рпп",
+        "прпрпа"
+      ],
+      "cover_url": "/uploads/avatar_cat-1653458091029.jpg",
+      "id": 9
+    },
+    {
+      "name": "",
+      "author": "",
+      "pages": "",
+      "description_url": "",
+      "tags": [
+        "гого"
+      ],
+      "cover_url": "",
+      "id": 10
     }
   ],
   "reports": [

@@ -1,9 +1,15 @@
 import Route from '@ember/routing/route';
 import RSVP from 'rsvp';
+import { set } from '@ember/object';
 
 import { PER_PAGE } from '../controllers/meetings';
 
 export default Route.extend({
+
+  setupController(controller/*, model*/) {
+    this._super(...arguments);
+    set(controller, 'dateMeeting', '');
+  },
 
   queryParams: {
     page: {
