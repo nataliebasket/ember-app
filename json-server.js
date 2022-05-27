@@ -111,6 +111,9 @@ server.use(responseInterceptor);
 server.use((request, response, next) => {
   const speaker = Number(request.query.speaker);
   const book = Number(request.query.book);
+  const dateMeeting = request.query.dateMeeting;
+
+  console.log(`dateMeeting ${dateMeeting}`);
 
   if (request.method === 'GET' && request.path === '/meetings' && !Number.isNaN(speaker)) {
 

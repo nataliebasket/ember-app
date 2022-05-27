@@ -16,7 +16,6 @@ export default Controller.extend({
     searchSpeaker(e) {
       e.preventDefault();
       this.set("search", this.get("searchSpeaker"));
-      // this.send("reloadPage");
     },
   }
 });

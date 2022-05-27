@@ -1,15 +1,12 @@
 import Route from '@ember/routing/route';
 import RSVP from 'rsvp';
-import { set } from '@ember/object';
+import { get } from '@ember/object';
+import moment from 'moment';
+
 
 import { PER_PAGE } from '../controllers/meetings';
 
 export default Route.extend({
-
-  setupController(controller/*, model*/) {
-    this._super(...arguments);
-    set(controller, 'dateMeeting', '');
-  },
 
   queryParams: {
     page: {
@@ -22,11 +19,15 @@ export default Route.extend({
     book:
     {
       refreshModel: true
-    }
+    },
+    dateMeeting:
+    {
+      refreshModel: true
+    },
   },
 
 
-  model({ page, speaker, book }) {
+  model({ page, speaker, book, dateMeeting}) {
     const query = {
       _page: page,
       _limit: PER_PAGE,
@@ -38,6 +39,11 @@ export default Route.extend({
 
     if (book) {
       query.book = book;
+    }
+
+    if (dateMeeting) {
+      // console.log(`${moment(dateMeeting).format('YYYY-MM-DD')}T00:00:00.000Z`);
+
     }
 
     return RSVP.hash({
