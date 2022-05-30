@@ -1,18 +1,21 @@
 import { computed } from '@ember/object';
 import Controller from '@ember/controller';
-import { set } from '@ember/object';
+import { get, set } from '@ember/object';
 import moment from 'moment';
+import $ from 'jquery';
 
 
 export const PER_PAGE = 3;
 
 export default Controller.extend({
 
-  queryParams: ['page', 'speaker', 'book', 'dateMeeting'],
+  queryParams: ['page', 'speaker', 'book'],
+  // queryParams: ['page', 'speaker', 'book', 'dateMeeting'],
+
   page: 1,
   speaker: '',
   book: '',
-  dateMeeting: '',
+
 
   pages: computed('model.meetings.meta.total', function() {
     const total = Number(this.get('model.meetings.meta.total'));
@@ -46,22 +49,18 @@ export default Controller.extend({
       // this.set('book', book ? book.get('id') : '');
     },
 
-    searchMeeting (selectedSpeaker, selectedBook) {
+    searchMeeting (selectedSpeaker, selectedBook, dateMeeting) {
       this.set('speaker', selectedSpeaker ? selectedSpeaker.id : '');
       this.set('book', selectedBook ? selectedBook.id : '');
-      // this.set('dateMeeting', dateMeeting);
-      // this.set('dateMeeting', this.get('dateMeeting'));
-      // this.set('dateMeeting', 123);
-      // console.log(dateMeeting);
-      // console.log(dateMeeting);
-      // console.log(`${moment(dateMeeting).format('YYYY-MM-DD')}T00:00:00.000Z`);
-      // console.log(this.get('dateMeeting'));
-      // console.log(moment(this.get('dateMeeting')).format());
-    },
+      this.set('dateMeeting', dateMeeting ? dateMeeting : '');
 
-    getDateMeeting(param) {
-      console.log(param);
-    }
+      console.log(this.get('dateMeeting'));
+
+      // console.log($(this).get(0).datepicker('getDate'));
+
+      // console.log(`${moment(dateMeeting).format('YYYY-MM-DD')}T00:00:00.000Z`);
+
+    },
 
   }
 });

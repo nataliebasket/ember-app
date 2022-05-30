@@ -375,3 +375,7 @@ a.card .card-body {
     height: 10em;
   }
 }
+
+.log-in-out-link {
+  padding: 8px;
+}

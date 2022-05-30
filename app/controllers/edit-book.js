@@ -4,6 +4,7 @@ import { inject as service } from '@ember/service';
 
 export default Controller.extend({
   dataService: service('data'),
+  currentUser: service(),
 
   actions: {
     changeTags(newTags) {
@@ -26,6 +27,7 @@ export default Controller.extend({
           description_url: this.get('model.description_url'),
           tags: this.get('tags'),
           cover_url: '',
+          user: this.get('currentUser.user')
         }, uploadData);
 
       // let bookModel =this.get('model');

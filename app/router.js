@@ -7,6 +7,13 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  // this.route('/', { path: '/'}, function() {
+  //   this.route('application', { path: '/'}, function() {
+  //     this.route('new-book');
+  //   });
+
+  // });
+
   this.route('books', {path: '/books'});
   this.route('speakers', {path: '/speakers'});
   this.route('404', {path: '*path'});
@@ -16,6 +23,8 @@ Router.map(function() {
   this.route('create-book');
   this.route('meetings');
   this.route('edit-meeting');
+  this.route('login');
+  this.route('register');
 });
 
 export default Router;

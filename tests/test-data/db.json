@@ -56,7 +56,8 @@
         "#жизнь",
         "#дружба"
       ],
-      "average_rating": 80
+      "average_rating": 80,
+      "userId": 2
     },
     {
       "id": 2,
@@ -69,7 +70,8 @@
         "#смерть",
         "#дружба"
       ],
-      "average_rating": 95
+      "average_rating": 95,
+      "userId": 2
     },
     {
       "id": 3,
@@ -82,7 +84,8 @@
         "#смерть",
         "#дружба"
       ],
-      "average_rating": 85
+      "average_rating": 85,
+      "userId": 2
     },
     {
       "id": 4,
@@ -95,7 +98,8 @@
         "#смерть",
         "#дружба"
       ],
-      "average_rating": 90
+      "average_rating": 90,
+      "userId": 2
     },
     {
       "id": 5,
@@ -108,7 +112,8 @@
         "#смерть",
         "#дружба"
       ],
-      "average_rating": 65
+      "average_rating": 65,
+      "userId": 2
     },
     {
       "id": 6,
@@ -121,7 +126,8 @@
         "#книга",
         "цветок"
       ],
-      "average_rating": 60
+      "average_rating": 60,
+      "userId": 2
     },
     {
       "name": "Айболит и его друзья",
@@ -135,7 +141,8 @@
       ],
       "id": 7,
       "cover_url": "/uploads/avatar_cat-1652881822618.jpg",
-      "average_rating": 10
+      "average_rating": 10,
+      "userId": 2
     },
     {
       "name": "Java Script",
@@ -148,30 +155,8 @@
         "фронтенд"
       ],
       "cover_url": "/uploads/littlebook-1652903046677.jpg",
-      "id": 8
-    },
-    {
-      "name": "рпр",
-      "author": "прпр",
-      "pages": "545",
-      "description_url": "прпр",
-      "tags": [
-        "рпп",
-        "прпрпа"
-      ],
-      "cover_url": "/uploads/avatar_cat-1653458091029.jpg",
-      "id": 9
-    },
-    {
-      "name": "",
-      "author": "",
-      "pages": "",
-      "description_url": "",
-      "tags": [
-        "гого"
-      ],
-      "cover_url": "",
-      "id": 10
+      "id": 8,
+      "userId": 2
     }
   ],
   "reports": [
@@ -299,7 +284,7 @@
   "meetings": [
     {
       "id": 1,
-      "dateMeeting": "2022-05-01T00:00:00.000Z"
+      "dateMeeting": "2022-05-01T00:00:00.000Z",
     },
     {
       "id": 2,
@@ -320,6 +305,18 @@
     {
       "id": 6,
       "dateMeeting": "2022-05-06T00:00:00.000Z"
+    }
+  ],
+  "users": [
+    {
+      "email": "n@n.ru",
+      "password": "7de728604ac1901aa046da0a7fc9151f093edbde9a4fd3c8a4303a5193318781",
+      "id": 1
+    },
+    {
+      "email": "admin@admin.ru",
+      "password": "aed439235437c68773dcb392849729f25edc0dd67119722c2a172e3fa5350711",
+      "id": 2
     }
   ]
 }

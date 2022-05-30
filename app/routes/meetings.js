@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 import RSVP from 'rsvp';
-import { get } from '@ember/object';
-import moment from 'moment';
+// import { get } from '@ember/object';
+// import moment from 'moment';
 
 
 import { PER_PAGE } from '../controllers/meetings';
@@ -43,7 +43,9 @@ export default Route.extend({
 
     if (dateMeeting) {
       // console.log(`${moment(dateMeeting).format('YYYY-MM-DD')}T00:00:00.000Z`);
+      console.log(dateMeeting);
 
+      console.log('12345');
     }
 
     return RSVP.hash({
@@ -53,6 +55,13 @@ export default Route.extend({
     });
 
   },
+
+  // setupController(controller, model) {
+  //   this._super(...arguments);
+  //   // if (this.get('modelPromise')) {
+  //   //   controller.set('isLoading', true);
+  //   // }
+  // },
 
   actions: {
     loading() {

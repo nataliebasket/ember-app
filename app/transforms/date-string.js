@@ -7,7 +7,7 @@ export default DateTransform.extend({
     let date = this._super(serialized);
     if (date instanceof Date && !isNaN(date)) {
       // let formattedDate = this.get('moment').moment(date).format('YYYY-MM-DD');
-      let formattedDate = this.get('moment').moment(date).format('DD-MM-YYYY');
+      let formattedDate = this.get('moment').moment(date).format('DD.MM.YYYY');
       return formattedDate;
     }
 
