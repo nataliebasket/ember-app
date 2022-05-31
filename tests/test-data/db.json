@@ -2,45 +2,59 @@
   "speakers": [
     {
       "id": 1,
-      "lastName": "Carter",
-      "firstName": "Nick",
-      "patronymic": "Bsb"
+      "lastName": "Попов",
+      "firstName": "Иван",
+      "patronymic": "Владиславович",
+      "userId": 2
     },
     {
       "id": 2,
-      "lastName": "McLean",
-      "firstName": "Alexandr",
-      "patronymic": "Bsb"
+      "lastName": "Марков",
+      "firstName": "Макар",
+      "patronymic": "Николаевич",
+      "userId": 2
     },
     {
       "id": 3,
-      "lastName": "Littrel",
-      "firstName": "Brian",
-      "patronymic": "Bsb"
+      "lastName": "Егоров",
+      "firstName": "Александр",
+      "patronymic": "Дмитриевич",
+      "userId": 2
     },
     {
       "id": 4,
-      "lastName": "Richardson",
-      "firstName": "Kevin",
-      "patronymic": "Bsb"
+      "lastName": "Зубков",
+      "firstName": "Максим",
+      "patronymic": "Константинович",
+      "userId": 1
     },
     {
       "id": 5,
-      "lastName": "Dorough",
-      "firstName": "Howie",
-      "patronymic": "Bsb"
+      "lastName": "Ершов",
+      "firstName": "Артём",
+      "patronymic": "Александрович",
+      "userId": 1
     },
     {
       "lastName": "Петрова",
       "firstName": "Кристина",
       "patronymic": "Сергеевна",
-      "id": 6
+      "id": 6,
+      "userId": 1
     },
     {
       "lastName": "Королев",
       "firstName": "Дмитрий",
       "patronymic": "Николаевич",
-      "id": 7
+      "id": 7,
+      "userId": 1
+    },
+    {
+      "lastName": "Попов",
+      "firstName": "Павел",
+      "patronymic": "Сергеевич",
+      "userId": 2,
+      "id": 8
     }
   ],
   "books": [
@@ -57,7 +71,7 @@
         "#дружба"
       ],
       "average_rating": 80,
-      "userId": 2
+      "userId": 1
     },
     {
       "id": 2,
@@ -71,7 +85,7 @@
         "#дружба"
       ],
       "average_rating": 95,
-      "userId": 2
+      "userId": 1
     },
     {
       "id": 3,
@@ -85,7 +99,7 @@
         "#дружба"
       ],
       "average_rating": 85,
-      "userId": 2
+      "userId": 1
     },
     {
       "id": 4,
@@ -150,13 +164,26 @@
       "pages": 1000,
       "description_url": "http://ghgh",
       "tags": [
-        "js",
-        "javaScript",
-        "фронтенд"
+        "#js",
+        "#javaScript",
+        "#фронтенд"
       ],
       "cover_url": "/uploads/littlebook-1652903046677.jpg",
       "id": 8,
       "userId": 2
+    },
+    {
+      "name": "fgbgfb",
+      "author": "gcfbgbgf",
+      "pages": 3432432,
+      "cover_url": "",
+      "description_url": "https://hnhnn.hg",
+      "tags": [
+        "rgrgrgr"
+      ],
+      "average_rating": null,
+      "userId": 2,
+      "id": 9
     }
   ],
   "reports": [
@@ -285,26 +312,32 @@
     {
       "id": 1,
       "dateMeeting": "2022-05-01T00:00:00.000Z",
+      "userId": 2
     },
     {
       "id": 2,
-      "dateMeeting": "2022-05-02T00:00:00.000Z"
+      "dateMeeting": "2022-05-02T00:00:00.000Z",
+      "userId": 2
     },
     {
       "id": 3,
-      "dateMeeting": "2022-05-03T00:00:00.000Z"
+      "dateMeeting": "2022-05-03T00:00:00.000Z",
+      "userId": 2
     },
     {
       "id": 4,
-      "dateMeeting": "2022-05-04T00:00:00.000Z"
+      "dateMeeting": "2022-05-04T00:00:00.000Z",
+      "userId": 2
     },
     {
       "id": 5,
-      "dateMeeting": "2022-05-05T00:00:00.000Z"
+      "dateMeeting": "2022-05-05T00:00:00.000Z",
+      "userId": 2
     },
     {
       "id": 6,
-      "dateMeeting": "2022-05-06T00:00:00.000Z"
+      "dateMeeting": "2022-05-06T00:00:00.000Z",
+      "userId": 2
     }
   ],
   "users": [
@@ -317,6 +350,11 @@
       "email": "admin@admin.ru",
       "password": "aed439235437c68773dcb392849729f25edc0dd67119722c2a172e3fa5350711",
       "id": 2
+    },
+    {
+      "email": "t@t.ru",
+      "password": "5e0c119fea5dd96b3035a0117ffa631ebb81d29b4236a95b8cceda651fcfc88f",
+      "id": 3
     }
   ]
 }

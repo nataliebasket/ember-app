@@ -1,27 +1,30 @@
 import Component from '@ember/component';
+import { inject as service } from '@ember/service';
+
 
 export default Component.extend({
+  store: service(),
+  currentUser: service(),
+
   actions: {
-    submitForm(e) {
+    async saveSpeaker(e) {
       e.preventDefault();
 
-      this.onsubmit(this.get('speaker'));
+      // this.onsubmit(this.get('speaker'));
+
+      this.onsubmit({
+        firstName: this.get('firstName'),
+        lastName: this.get('lastName'),
+        patronymic: this.get('patronymic'),
+        user: this.get('currentUser.user')
+      });
     },
 
     cancelForm() {
       this.onsubmit();
     },
 
-    // submitForm(e) {
-    //   e.preventDefault();
 
-    //   this.onsubmit({
-    //     id: this.get('idSpeaker'),
-    //     firstName: this.get('firstName'),
-    //     lastName: this.get('lastName'),
-    //     patronymic: this.get('patronymic'),
-    //   });
-    // }
   },
 
   didReceiveAttrs() {
@@ -33,7 +36,7 @@ export default Component.extend({
       idSpeaker: this.get('speaker.id') ? this.get('speaker.id') : undefined,
       firstName: this.get('speaker.firstName'),
       lastName: this.get('speaker.lastName'),
-      patronymic: this.get('speaker.patronymic'),
+      patronymic: this.get('speaker.patronymic')
     });
   },
 });

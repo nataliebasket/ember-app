@@ -19,11 +19,12 @@ export default Route.extend({
     book:
     {
       refreshModel: true
-    },
-    dateMeeting:
-    {
-      refreshModel: true
-    },
+    }
+    // ,
+    // dateMeeting:
+    // {
+    //   refreshModel: true
+    // },
   },
 
 
@@ -42,10 +43,9 @@ export default Route.extend({
     }
 
     if (dateMeeting) {
-      // console.log(`${moment(dateMeeting).format('YYYY-MM-DD')}T00:00:00.000Z`);
-      console.log(dateMeeting);
-
-      console.log('12345');
+      // query.dateMeeting = dateMeeting;
+      // console.log(dateMeeting);
+      // console.log('12345');
     }
 
     return RSVP.hash({

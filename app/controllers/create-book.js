@@ -5,6 +5,9 @@ import { inject as service } from '@ember/service';
 export default Controller.extend({
   dataService: service('data'),
 
+  store: service(),
+  currentUser: service(),
+
   init() {
     this._super(...arguments);
     set(this, 'tags', []);
@@ -25,26 +28,28 @@ export default Controller.extend({
       set(this, 'isUploadingFile', true);
       const uploadData = get(this, 'uploadData');
 
-      await this.get("dataService").createBook({
+      // await this.get("dataService").createBook({
+      //   name: this.get('bookName'),
+      //   author: this.get('bookAuthor'),
+      //   pages: this.get('bookPages'),
+      //   description_url: this.get('bookURL'),
+      //   tags: this.get('tags'),
+      //   user: this.get('currentUser.user'),
+      //   cover_url: '',
+      //   }, uploadData);
+
+      let newBook = this.get('store').createRecord('book',
+      {
         name: this.get('bookName'),
         author: this.get('bookAuthor'),
         pages: this.get('bookPages'),
         description_url: this.get('bookURL'),
         tags: this.get('tags'),
         cover_url: '',
-        }, uploadData);
+        user: this.get('currentUser.user')
+      });
 
-      // let newBook = this.get('store').createRecord('book',
-      // {
-      //   name: this.get('bookName'),
-      //   author: this.get('bookAuthor'),
-      //   pages: this.get('bookPages'),
-      //   description_url: this.get('bookURL'),
-      //   tags: this.get('tags'),
-      //   cover_url: ''
-      // });
-
-      // await newBook.save();
+      await newBook.save();
 
 
       set(this, 'isUploadingFile', false);

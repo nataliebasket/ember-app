@@ -1,13 +1,17 @@
 import { computed } from '@ember/object';
 import Controller from '@ember/controller';
-import { get, set } from '@ember/object';
-import moment from 'moment';
-import $ from 'jquery';
+// import { get, set } from '@ember/object';
+// import moment from 'moment';
+// import $ from 'jquery';
+import { inject as service } from '@ember/service';
 
 
 export const PER_PAGE = 3;
 
 export default Controller.extend({
+  session: service(),
+  dataService: service('data'),
+
 
   queryParams: ['page', 'speaker', 'book'],
   // queryParams: ['page', 'speaker', 'book', 'dateMeeting'],
@@ -49,18 +53,20 @@ export default Controller.extend({
       // this.set('book', book ? book.get('id') : '');
     },
 
-    searchMeeting (selectedSpeaker, selectedBook, dateMeeting) {
+    searchMeeting (selectedSpeaker, selectedBook) {
       this.set('speaker', selectedSpeaker ? selectedSpeaker.id : '');
       this.set('book', selectedBook ? selectedBook.id : '');
-      this.set('dateMeeting', dateMeeting ? dateMeeting : '');
 
+      // this.set('dateMeeting', dateMeeting ? dateMeeting : '');
+
+      // console.log('dateMeeting');
       console.log(this.get('dateMeeting'));
 
-      // console.log($(this).get(0).datepicker('getDate'));
-
-      // console.log(`${moment(dateMeeting).format('YYYY-MM-DD')}T00:00:00.000Z`);
-
     },
+
+    changeDateMeeting (dateMeeting) {
+      this.set('dateMeeting', dateMeeting);
+    }
 
   }
 });

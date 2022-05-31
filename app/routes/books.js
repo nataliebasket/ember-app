@@ -3,6 +3,7 @@ import { inject as service } from '@ember/service';
 
 export default Route.extend({
   dataService: service('data'), //с ипользованием inject получаем нужный сервис
+  currentUser: service(),
 
   queryParams: {
     search: {
@@ -14,8 +15,6 @@ export default Route.extend({
   },
 
   model ({ search, tag }) {
-    // return this.get('store').findAll ('book');
     return this.get('store').query('book', {q: search, tags_like: tag});
-    // return (search || tag) ? this.get("dataService").getBooks(search, tag) : this.get("dataService").getBooks();
   }
 });

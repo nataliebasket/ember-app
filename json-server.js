@@ -285,9 +285,12 @@ server.use(responseInterceptor);
 server.use((request, response, next) => {
   const speaker = Number(request.query.speaker);
   const book = Number(request.query.book);
+  const dateMeeting = Number(request.query.dateMeeting);
 
   if (request.method === 'GET' && request.path === '/meetings' && !Number.isNaN(speaker)) {
 
+    console.log(speaker);
+    console.log(dateMeeting);
     const arr = router.db.get('reports').filter(report => report.speakerId === speaker).value();
     const mapArr = arr.map(report => report.meetingId);
     const newMeetings = router.db.get('meetings').filter( meeting => mapArr.some(el => meeting.id === el)).value();

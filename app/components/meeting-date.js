@@ -15,28 +15,18 @@ export default Component.extend({
       autoclose: true
     });
 
+    const self = this;
+
     this.$('.datepicker').datepicker().on("change", function() {
-      moment.fn.toJSON = function() { return this.format(); }
-      set(this, 'dateMeeting', moment($(this).datepicker('getDate')));
-      console.log(moment(get(this,'dateMeeting')).toJSON());
+      // moment.fn.toJSON = function() { return this.format(); }
+
+      // set(this, 'dateMeeting', moment($(this).datepicker('getDate')).toISOString());
+
+      get(self, 'changeDateMeeting')(moment($(this).datepicker('getDate')).toISOString());
+      // console.log(moment(get(this,'dateMeeting')).toISOString());
+
     });
   },
-
-  didRender() {
-    // this._super(...arguments);
-    // this.setProperties({
-    //   dateMeeting: this.$('.datepicker').datepicker('getDate', '') ? this.$('.datepicker').datepicker('getDate', '') : undefined,
-    // });
-    // console.log(this.get('dateMeeting'));
-  },
-
-  didReceiveAttrs() {
-    // this._super(...arguments);
-    // this.setProperties({
-    //   dateMeeting: this.$('.datepicker').datepicker('getDate', '') ? this.$('.datepicker').datepicker('getDate', '') : undefined,
-    // });
-    // console.log(this.get('dateMeeting'));
-  }
 
 });
 

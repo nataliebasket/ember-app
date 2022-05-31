@@ -2,6 +2,7 @@
 {{!-- {{welcome-page}} --}}
 {{!-- Feel free to remove this! --}}
 
+{{!-- {{#if this.session.isAuthenticated}} --}}
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
   {{#link-to "index" class="navbar-brand"}}
     <img src="/images/logo-dark.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
@@ -51,11 +52,14 @@
     </ul>
   </div>
 </nav>
+{{!-- {{/if}} --}}
 
 {{outlet}}
 
+{{!-- {{#if this.session.isAuthenticated}} --}}
 <footer class="footer">
   <div class="container">
     <span>&copy; New Platform Ltd., 2022</span>
   </div>
 </footer>
+{{!-- {{/if}} --}}

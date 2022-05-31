@@ -1,5 +1,5 @@
 import DS from 'ember-data';
-// import { isNone } from '@ember/utils';
+import { isNone } from '@ember/utils';
 
 export default DS.JSONSerializer.extend({
   normalize(model, hash) {
