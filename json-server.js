@@ -15,8 +15,8 @@ const middlewares = jsonServer.defaults()
 const secretKey = '09f26e402586e2faa8da4c98a35f1b20d6b033c6097befa8be3486a829587fe2f90a832bd3ff9d42710a4da095a2ce285b009f0c3730cd9b8e1af3eb84df6611';
 const hashingSecret = "f844b09ff50c";
 
-const RECAPTCHA_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
-const RECAPTCHA_SECRET = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
+// const RECAPTCHA_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
+// const RECAPTCHA_SECRET = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
 
 const generateAccessToken = (userData) => {
   // expires after half and hour (1800 seconds = 30 minutes)
@@ -239,20 +239,19 @@ server.use((req, res, next) => {
   }
 });
 
-server.use(async (request, response, next) => {
-  if (request.path === '/recaptcha' && request.query.key) {
-    const { success } = await (await fetch(RECAPTCHA_VERIFY_URL, {
-      method: 'POST',
-      headers: { 'content-type': 'application/x-www-form-urlencoded' },
-      body: `secret=${RECAPTCHA_SECRET}&response=${request.query.key}`,
-    })).json();
+// server.use(async (request, response, next) => {
+//   if (request.path === '/recaptcha' && request.query.key) {
+//     const { success } = await (await fetch(RECAPTCHA_VERIFY_URL, {
+//       method: 'POST',
+//       headers: { 'content-type': 'application/x-www-form-urlencoded' },
+//       body: `secret=${RECAPTCHA_SECRET}&response=${request.query.key}`,
+//     })).json();
 
-    response.json({ success });
-  } else {
-    next();
-  }
-});
-
+//     response.json({ success });
+//   } else {
+//     next();
+//   }
+// });
 
 //delete record begin////////////////////////////////////////////////
 
@@ -275,7 +274,6 @@ function responseInterceptor(req, res, next) {
 
     originalSend.apply(res, arguments);
   };
-
   next();
 }
 
@@ -283,31 +281,67 @@ server.use(responseInterceptor);
 //delete record end
 
 server.use((request, response, next) => {
-  const speaker = Number(request.query.speaker);
-  const book = Number(request.query.book);
-  const dateMeeting = Number(request.query.dateMeeting);
+  // let speaker = Number(request.query.speaker);
+  // let book = Number(request.query.book);
+  // let dateMeeting = request.query.dateMeeting;
 
-  if (request.method === 'GET' && request.path === '/meetings' && !Number.isNaN(speaker)) {
+  // if (Number.isNaN(speaker)) { speaker = "all"}
+  // if (Number.isNaN(book)) { book = "all"}
+  // if (dateMeeting === undefined) { dateMeeting = "all"}
+
+  // console.log(speaker);
+  // console.log(book);
+  // console.log(dateMeeting);
+  // console.log(dateMeeting);
+
+  if (request.method === 'GET' && request.path === '/meetings') {
+    let speaker = Number(request.query.speaker);
+    let book = Number(request.query.book);
+    let dateMeeting = request.query.dateMeeting;
+
+
+    if (Number.isNaN(speaker)) { speaker = 'all'}
+    if (Number.isNaN(book)) { book = 'all'}
+    if (dateMeeting === undefined || dateMeeting === 'Invalid date') { dateMeeting = 'all'}
 
     console.log(speaker);
+    console.log(book);
+
+    console.log(typeof dateMeeting);
     console.log(dateMeeting);
-    const arr = router.db.get('reports').filter(report => report.speakerId === speaker).value();
+
+    const arr = router.db.get('reports').filter(report => (report.speakerId === speaker || speaker === "all") && (report.bookId === book || book === "all")).value();
+    console.log(arr);
     const mapArr = arr.map(report => report.meetingId);
-    const newMeetings = router.db.get('meetings').filter( meeting => mapArr.some(el => meeting.id === el)).value();
-    newMeetings.forEach((newMeeting) =>newMeeting.reports = router.db.get('reports').filter((report) => report.meetingId === newMeeting.id));
+    console.log(mapArr);
+    const newMeetings = router.db.get('meetings').filter( meeting => (mapArr.some(el => meeting.id === el)) && (meeting.dateMeeting === dateMeeting || dateMeeting === "all")).value();
+    console.log(newMeetings);
+    newMeetings.forEach((newMeeting) => newMeeting.reports = arr.filter((report) => report.meetingId === newMeeting.id));
+    console.log(newMeetings);
     response.json(newMeetings);
-
-  } else if (request.method === 'GET' && request.path === '/meetings' && !Number.isNaN(book)) {
-
-    const arr = router.db.get('reports').filter(report => report.bookId === book).value();
-    const mapArr = arr.map(report => report.meetingId);
-    const newMeetings = router.db.get('meetings').filter( meeting => mapArr.some(el => meeting.id === el)).value();
-    newMeetings.forEach((newMeeting) =>newMeeting.reports = router.db.get('reports').filter((report) => report.meetingId === newMeeting.id));
-    response.json(newMeetings);
-
   } else {
     next();
   }
+
+  // if (request.method === 'GET' && request.path === '/meetings' && !Number.isNaN(speaker)) {
+
+  //   const arr = router.db.get('reports').filter(report => report.speakerId === speaker).value();
+  //   const mapArr = arr.map(report => report.meetingId);
+  //   const newMeetings = router.db.get('meetings').filter( meeting => mapArr.some(el => meeting.id === el)).value();
+  //   newMeetings.forEach((newMeeting) =>newMeeting.reports = router.db.get('reports').filter((report) => report.meetingId === newMeeting.id));
+  //   response.json(newMeetings);
+
+  // } else if (request.method === 'GET' && request.path === '/meetings' && !Number.isNaN(book)) {
+
+  //   const arr = router.db.get('reports').filter(report => report.bookId === book).value();
+  //   const mapArr = arr.map(report => report.meetingId);
+  //   const newMeetings = router.db.get('meetings').filter( meeting => mapArr.some(el => meeting.id === el)).value();
+  //   newMeetings.forEach((newMeeting) =>newMeeting.reports = router.db.get('reports').filter((report) => report.meetingId === newMeeting.id));
+  //   response.json(newMeetings);
+
+  // } else {
+  //   next();
+  // }
 });
 
 // Use default router

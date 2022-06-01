@@ -18,12 +18,19 @@ export default Component.extend({
     const self = this;
 
     this.$('.datepicker').datepicker().on("change", function() {
-      // moment.fn.toJSON = function() { return this.format(); }
+      moment.fn.toJSON = function() { return this.format(); }
+      get(self, 'changeDateMeeting')(moment($(this).datepicker('getDate')).toJSON());
 
-      // set(this, 'dateMeeting', moment($(this).datepicker('getDate')).toISOString());
-
-      get(self, 'changeDateMeeting')(moment($(this).datepicker('getDate')).toISOString());
       // console.log(moment(get(this,'dateMeeting')).toISOString());
+
+      // console.log(moment($(this).datepicker('getDate')).toJSON());
+
+      // console.log(typeof get(this, 'dateMeeting'));
+      // console.log(get(this, 'dateMeeting'));
+
+      // console.log(moment(get(this,'dateMeeting')).format());
+      // console.log(moment(get(this,'dateMeeting')).toJSON());
+      // console.log(moment(get(this,'dateMeeting')));
 
     });
   },

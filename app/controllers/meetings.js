@@ -19,7 +19,7 @@ export default Controller.extend({
   page: 1,
   speaker: '',
   book: '',
-
+  // dateMeeting: '',
 
   pages: computed('model.meetings.meta.total', function() {
     const total = Number(this.get('model.meetings.meta.total'));
@@ -44,28 +44,25 @@ export default Controller.extend({
 
   actions: {
     changeSpeaker(speaker) {
-      this.set('selectedSpeaker', speaker)
-      // this.set('speaker', speaker ? speaker.get('id') : '');
+      this.set('selectedSpeaker', speaker);
     },
 
     changeBook(book) {
-      this.set('selectedBook', book)
-      // this.set('book', book ? book.get('id') : '');
+      this.set('selectedBook', book);
     },
 
     searchMeeting (selectedSpeaker, selectedBook) {
       this.set('speaker', selectedSpeaker ? selectedSpeaker.id : '');
       this.set('book', selectedBook ? selectedBook.id : '');
+      // this.set('selectedDateMeeting')
 
-      // this.set('dateMeeting', dateMeeting ? dateMeeting : '');
-
-      // console.log('dateMeeting');
+      console.log('dateMeeting:');
       console.log(this.get('dateMeeting'));
-
     },
 
     changeDateMeeting (dateMeeting) {
       this.set('dateMeeting', dateMeeting);
+      console.log(dateMeeting);
     }
 
   }

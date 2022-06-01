@@ -189,7 +189,7 @@
   "reports": [
     {
       "id": 1,
-      "dateMeeting": "2022-05-01T00:00:00.000Z",
+      "dateMeeting": "2022-06-01T00:00:00.000Z",
       "points": 30,
       "url_presentation": "123.ru",
       "url_video": "123.ru",
@@ -199,7 +199,7 @@
     },
     {
       "id": 2,
-      "dateMeeting": "2022-05-01T00:00:00.000Z",
+      "dateMeeting": "2022-06-01T00:00:00.000Z",
       "points": 40,
       "url_presentation": "456.ru",
       "url_video": "456.ru",
@@ -209,7 +209,7 @@
     },
     {
       "id": 3,
-      "dateMeeting": "2022-05-02T00:00:00.000Z",
+      "dateMeeting": "2022-06-02T00:00:00.000Z",
       "points": 50,
       "url_presentation": "123.ru",
       "url_video": "123.ru",
@@ -219,7 +219,7 @@
     },
     {
       "id": 4,
-      "dateMeeting": "2022-05-02T00:00:00.000Z",
+      "dateMeeting": "2022-06-02T00:00:00.000Z",
       "points": 60,
       "url_presentation": "456.ru",
       "url_video": "456.ru",
@@ -229,7 +229,7 @@
     },
     {
       "id": 5,
-      "dateMeeting": "2022-05-03T00:00:00.000Z",
+      "dateMeeting": "2022-06-03T00:00:00.000Z",
       "points": 50,
       "url_presentation": "123.ru",
       "url_video": "123.ru",
@@ -239,7 +239,7 @@
     },
     {
       "id": 6,
-      "dateMeeting": "2022-05-03T00:00:00.000Z",
+      "dateMeeting": "2022-06-03T00:00:00.000Z",
       "points": 60,
       "url_presentation": "456.ru",
       "url_video": "456.ru",
@@ -249,7 +249,7 @@
     },
     {
       "id": 7,
-      "dateMeeting": "2022-05-04T00:00:00.000Z",
+      "dateMeeting": "2022-06-04T00:00:00.000Z",
       "points": 50,
       "url_presentation": "123.ru",
       "url_video": "123.ru",
@@ -259,7 +259,7 @@
     },
     {
       "id": 8,
-      "dateMeeting": "2022-05-04T00:00:00.000Z",
+      "dateMeeting": "2022-06-04T00:00:00.000Z",
       "points": 60,
       "url_presentation": "456.ru",
       "url_video": "456.ru",
@@ -311,32 +311,32 @@
   "meetings": [
     {
       "id": 1,
-      "dateMeeting": "2022-05-01T00:00:00.000Z",
+      "dateMeeting": "2022-06-01T00:00:00+03:00",
       "userId": 2
     },
     {
       "id": 2,
-      "dateMeeting": "2022-05-02T00:00:00.000Z",
+      "dateMeeting": "2022-06-02T00:00:00+03:00",
       "userId": 2
     },
     {
       "id": 3,
-      "dateMeeting": "2022-05-03T00:00:00.000Z",
+      "dateMeeting": "2022-06-03T00:00:00+03:00",
       "userId": 2
     },
     {
       "id": 4,
-      "dateMeeting": "2022-05-04T00:00:00.000Z",
+      "dateMeeting": "2022-06-04T00:00:00+03:00",
       "userId": 2
     },
     {
       "id": 5,
-      "dateMeeting": "2022-05-05T00:00:00.000Z",
+      "dateMeeting": "2022-06-05T00:00:00+03:00",
       "userId": 2
     },
     {
       "id": 6,
-      "dateMeeting": "2022-05-06T00:00:00.000Z",
+      "dateMeeting": "2022-06-06T00:00:00+03:00",
       "userId": 2
     }
   ],
