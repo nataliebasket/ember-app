@@ -1,27 +1,29 @@
  <form onsubmit={{action "saveUser"}}>
       <img class="mb-4" src="images/logo-dark.png" alt="" height="57">
       <h1 class="h3 mb-3 fw-normal">Регистрация n@n.ru</h1>
-
       <div class="form-floating">
 
         {{input type="text" value=email class="form-control" placeholder="name@example.com" id="floatingInput"}}
 
-        {{#each errors.email as |error|}}
-          <span class="error-message">{{error.message}}</span>
-        {{/each}}
+        {{!-- {{#if (v-get this 'email' 'isInvalid')}} --}}
+        {{#if (and isInvalid (v-get this 'email' 'isInvalid'))}}
+          <span class="validate-message">
+            {{v-get this 'email' 'message'}}
+          </span>
+        {{/if}}
 
       </div>
       <div class="form-floating">
-
         {{input type="password" class="form-control" placeholder="Password" value=password id="floatingPassword"}}
-
-        {{#each errors.password as |error|}}
-          <span class="error-message">{{error.message}}</span>
-        {{/each}}
-
+        {{#if (and isInvalid (v-get this 'password' 'isInvalid'))}}
+        {{!-- {{#if (v-get this 'password' 'isInvalid')}} --}}
+          <span class="validate-message">
+            {{v-get this 'password' 'message'}}
+          </span>
+        {{/if}}
       </div>
 
-      <button class="w-100 btn btn-lg btn-primary mb-3" type="submit" href="index.html">Зарегистрироваться</button>
+      <button class="w-100 btn btn-lg btn-primary mb-3" type="submit" href="index.html" >Зарегистрироваться</button>
 
       {{#link-to "index" class="w-100"}}
         Назад

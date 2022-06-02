@@ -285,15 +285,6 @@ server.use((request, response, next) => {
   // let book = Number(request.query.book);
   // let dateMeeting = request.query.dateMeeting;
 
-  // if (Number.isNaN(speaker)) { speaker = "all"}
-  // if (Number.isNaN(book)) { book = "all"}
-  // if (dateMeeting === undefined) { dateMeeting = "all"}
-
-  // console.log(speaker);
-  // console.log(book);
-  // console.log(dateMeeting);
-  // console.log(dateMeeting);
-
   if (request.method === 'GET' && request.path === '/meetings') {
     let speaker = Number(request.query.speaker);
     let book = Number(request.query.book);
@@ -304,20 +295,10 @@ server.use((request, response, next) => {
     if (Number.isNaN(book)) { book = 'all'}
     if (dateMeeting === undefined || dateMeeting === 'Invalid date') { dateMeeting = 'all'}
 
-    console.log(speaker);
-    console.log(book);
-
-    console.log(typeof dateMeeting);
-    console.log(dateMeeting);
-
     const arr = router.db.get('reports').filter(report => (report.speakerId === speaker || speaker === "all") && (report.bookId === book || book === "all")).value();
-    console.log(arr);
     const mapArr = arr.map(report => report.meetingId);
-    console.log(mapArr);
     const newMeetings = router.db.get('meetings').filter( meeting => (mapArr.some(el => meeting.id === el)) && (meeting.dateMeeting === dateMeeting || dateMeeting === "all")).value();
-    console.log(newMeetings);
     newMeetings.forEach((newMeeting) => newMeeting.reports = arr.filter((report) => report.meetingId === newMeeting.id));
-    console.log(newMeetings);
     response.json(newMeetings);
   } else {
     next();

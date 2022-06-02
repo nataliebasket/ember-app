@@ -10,8 +10,6 @@ export default Component.extend({
     async saveSpeaker(e) {
       e.preventDefault();
 
-      // this.onsubmit(this.get('speaker'));
-
       this.onsubmit({
         firstName: this.get('firstName'),
         lastName: this.get('lastName'),
@@ -29,8 +27,6 @@ export default Component.extend({
 
   didReceiveAttrs() {
     this._super(...arguments);
-    // this.set('firstName', this.get('author.firstName'));
-    // this.set('lastName', this.get('author.lastName'));
 
     this.setProperties({
       idSpeaker: this.get('speaker.id') ? this.get('speaker.id') : undefined,

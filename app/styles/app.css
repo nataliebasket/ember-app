@@ -379,3 +379,19 @@ a.card .card-body {
 .log-in-out-link {
   padding: 8px;
 }
+
+.validate-message {
+  color: red;
+  background-color: #fce4e4;
+  border: 1px solid #fcc2c3;
+  border-radius: 3px;
+  float: left;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.language-select {
+  margin-left: 20px;
+  border: none;
+  background-color: #f5f5f5;
+}

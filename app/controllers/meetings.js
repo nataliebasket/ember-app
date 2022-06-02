@@ -2,7 +2,8 @@ import { computed } from '@ember/object';
 import Controller from '@ember/controller';
 // import { get, set } from '@ember/object';
 // import moment from 'moment';
-// import $ from 'jquery';
+import $ from 'jquery';
+
 import { inject as service } from '@ember/service';
 
 
@@ -13,13 +14,13 @@ export default Controller.extend({
   dataService: service('data'),
 
 
-  queryParams: ['page', 'speaker', 'book'],
-  // queryParams: ['page', 'speaker', 'book', 'dateMeeting'],
+  // queryParams: ['page', 'speaker', 'book'],
+  queryParams: ['page', 'speaker', 'book', 'dateMeeting'],
 
   page: 1,
   speaker: '',
   book: '',
-  // dateMeeting: '',
+  dateMeeting: '',
 
   pages: computed('model.meetings.meta.total', function() {
     const total = Number(this.get('model.meetings.meta.total'));

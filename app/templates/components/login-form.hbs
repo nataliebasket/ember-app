@@ -3,17 +3,31 @@
   <h1 class="h3 mb-3 fw-normal">Вход admin@admin.ru</h1>
 
   {{#each errors as |error|}}
-    <div class="error-alert">{{error.detail}}</div>
+    <div class="validate-message">{{error.detail}}</div>
   {{/each}}
 
   <div class="form-floating">
 
     {{input type="text" value=email placeholder="name@example.com" class="form-control" id="floatingInput"}}
 
+    {{#if (and isInvalid (v-get this 'email' 'isInvalid'))}}
+    {{!-- {{#if (v-get this 'email' 'isInvalid')}} --}}
+      <span class="validate-message">
+        {{v-get this 'email' 'message'}}
+      </span>
+    {{/if}}
+
   </div>
   <div class="form-floating">
 
     {{input type="password" placeholder="Пароль" value=password class="form-control" id="floatingPassword"}}
+
+    {{#if (and isInvalid (v-get this 'password' 'isInvalid'))}}
+    {{!-- {{#if (v-get this 'password' 'isInvalid')}} --}}
+      <span class="validate-message">
+        {{v-get this 'password' 'message'}}
+      </span>
+    {{/if}}
 
   </div>
 

@@ -6,7 +6,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
   {{#link-to "index" class="navbar-brand"}}
     <img src="/images/logo-dark.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-      Книжный клуб
+      {{t "menu.bookClub"}}
   {{/link-to}}
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Открыть меню">
     <span class="navbar-toggler-icon"></span>
@@ -14,41 +14,32 @@
   <div class="collapse navbar-collapse" id="navbarContent">
     <ul class="nav navbar-nav navigation-main">
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">Рабочий стол <span class="sr-only">(текущий)</span></a>
+        <a class="nav-link" href="index.html">{{t "menu.desktop"}}<span class="sr-only">(текущий)</span></a>
       </li>
       <li class="nav-item">
-        {{#link-to "meetings" class="nav-link"}}
-          Встречи клуба
-        {{/link-to}}
+        {{#link-to "meetings" class="nav-link"}}{{t "menu.meetings"}}{{/link-to}}
       </li>
       <li class="nav-item">
-        {{#link-to "books" class="nav-link"}}
-          Книги
-        {{/link-to}}
+        {{#link-to "books" class="nav-link"}}{{t "menu.books"}}{{/link-to}}
       </li>
       <li class="nav-item">
-        {{#link-to "speakers" class="nav-link"}}
-          Спикеры
-        {{/link-to}}
+        {{#link-to "speakers" class="nav-link"}}{{t "menu.speakers"}}{{/link-to}}
       </li>
       <li class="nav-item">
-        <a class="nav-link text-success" href="#">Оставить заявку</a>
+        <a class="nav-link text-success" href="#">{{t "menu.leaveRequest"}}</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-primary" href="#">Запланировать</a>
+        <a class="nav-link text-primary" href="#">{{t "menu.schedule"}}</a>
       </li>
     </ul>
     <ul class="nav navbar-nav">
       {{#if session.isAuthenticated}}
-        <li class="nav-item log-in-out-link"><a href="#" onclick={{action "logout"}}>Выйти</a></li>
-        <li class="nav-item log-in-out-link"> Приветствую, <strong>{{currentUser.user.email}}</strong> </li>
+        <li class="nav-item log-in-out-link"><a href="#" onclick={{action "logout"}}>{{t "menu.logout"}}</a></li>
+        <li class="nav-item log-in-out-link">{{t "menu.hello"}}, <strong>{{currentUser.user.email}}</strong> </li>
       {{else}}
-        <li class="nav-item"> {{#link-to "register" class="nav-link  text-info"}} Регистрация {{/link-to}}  </li>
-        <li class="nav-item"> {{#link-to "login" class="nav-link"}} Войти {{/link-to}} </li>
+        <li class="nav-item"> {{#link-to "register" class="nav-link  text-info"}}{{t "menu.register"}}{{/link-to}}  </li>
+        <li class="nav-item"> {{#link-to "login" class="nav-link"}}{{t "menu.login"}}{{/link-to}} </li>
       {{/if}}
-      {{!-- {{#if session.isAuthenticated}} --}}
-        {{!-- <li class="nav-item"> Hello, <strong>{{currentUser.user.email}}</strong> </li> --}}
-      {{!-- {{/if}} --}}
     </ul>
   </div>
 </nav>
@@ -60,6 +51,12 @@
 <footer class="footer">
   <div class="container">
     <span>&copy; New Platform Ltd., 2022</span>
+
+    <select class="language-select" id="languageSelect" onchange={{action "changeLocale"}}>
+      <option value="ru" selected={{isRussian}}>Ru</option>
+      <option value="en" selected={{isEnglish}}>En</option>
+    </select>
+
   </div>
 </footer>
 {{!-- {{/if}} --}}
