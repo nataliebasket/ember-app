@@ -1,22 +1,20 @@
 import Controller from '@ember/controller';
-// import { inject as service } from '@ember/service';
+import { debounce } from '@ember/runloop';
 
 export default Controller.extend({
-  // session: service(),
-  // dataService: service('data'),
 
   queryParams: ["search"],
   search: '',
 
   actions: {
     deleteSpeaker(speaker) {
-      // this.get("dataService").deleteSpeaker(speaker);
       speaker.destroyRecord();
     },
 
-    searchSpeaker(e) {
-      e.preventDefault();
-      this.set("search", this.get("searchSpeaker"));
-    },
-  }
+    searchSpeaker() {
+      debounce(() => {
+        this.set("search", this.get("searchSpeaker"));
+      }, 2000);
+    }
+  },
 });

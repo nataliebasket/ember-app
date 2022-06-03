@@ -14,9 +14,8 @@
 				</div>
 				<div class="col-md-auto">
 					<form class="form-inline">
-            {{input type="search" value=searchSpeaker class="form-control mr-2 search-long search-only" aria-label="Спикер" id="inputSurname" placeholder="ФИО"}}
-						{{!-- <input class="form-control mr-2 search-long search-only" type="search" placeholder="ФИО" aria-label="Спикер"> --}}
-						<button class="btn btn-primary my-2" onclick={{action "searchSpeaker"}}>Найти</button>
+            {{input type="search" input=(action "searchSpeaker") value=searchSpeaker class="form-control mr-2 search-long search-only" aria-label="Спикер" id="inputSurname" placeholder="ФИО"}}
+						{{!-- <button class="btn btn-primary my-2">Найти</button> --}}
 					</form>
 				</div>
 			</div>
