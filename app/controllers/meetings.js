@@ -2,7 +2,7 @@ import { computed } from '@ember/object';
 import Controller from '@ember/controller';
 // import { get, set } from '@ember/object';
 // import moment from 'moment';
-import $ from 'jquery';
+// import $ from 'jquery';
 
 import { inject as service } from '@ember/service';
 
@@ -13,8 +13,6 @@ export default Controller.extend({
   session: service(),
   dataService: service('data'),
 
-
-  // queryParams: ['page', 'speaker', 'book'],
   queryParams: ['page', 'speaker', 'book', 'dateMeeting'],
 
   page: 1,
@@ -55,15 +53,13 @@ export default Controller.extend({
     searchMeeting (selectedSpeaker, selectedBook) {
       this.set('speaker', selectedSpeaker ? selectedSpeaker.id : '');
       this.set('book', selectedBook ? selectedBook.id : '');
-      // this.set('selectedDateMeeting')
+      this.set('dateMeeting', this.get('selectedDateMeeting'));
 
-      console.log('dateMeeting:');
-      console.log(this.get('dateMeeting'));
     },
 
-    changeDateMeeting (dateMeeting) {
-      this.set('dateMeeting', dateMeeting);
-      console.log(dateMeeting);
+    // changeDateMeeting (dateMeeting) {
+    changeDateMeeting (selectedDateMeeting) {
+      this.set('selectedDateMeeting', selectedDateMeeting);
     }
 
   }
