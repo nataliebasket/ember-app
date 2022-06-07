@@ -1,5 +1,6 @@
 import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
+import { get } from '@ember/object';
 
 export default Controller.extend({
   session: service(),
@@ -18,10 +19,13 @@ export default Controller.extend({
     },
 
     error(error, transition) {
+
+      const applicationError = get(this, 'applicationError');// error logger
+      applicationError.saveError('Error in login user')
+
       if (error instanceof Error) {
         return true;
       }
-
       this.set('errors', error.json.errors);
       // this.set('errors', error.errors);
       return false;

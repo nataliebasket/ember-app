@@ -11,12 +11,12 @@ const Validations = buildValidations({
   ],
   password: [
     validator('ds-error'),
-    validator('presence', {
-      presence: true,
-      message: computed('model.{password,i18n.locale}', function () {
-        return '{description} ' + get(this, 'model.i18n').t('errors.blank');
-      }),
-    }),
+    // validator('presence', {
+    //   presence: true,
+    //   message: computed('model.{password,i18n.locale}', function () {
+    //     return '{description} ' + get(this, 'model.i18n').t('errors.blank');
+    //   }),
+    // }),
     validator('length', {
       min: 4,
       max: 8

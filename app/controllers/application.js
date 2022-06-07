@@ -23,7 +23,7 @@ export default Controller.extend({
       e.preventDefault();
       this.get('session').invalidate();
     },
-    
+
     changeLocale(e) {
       set(this, 'currentLocale', e.target.value);
       set(this, 'i18n.locale', get(this, 'currentLocale'));

@@ -356,5 +356,14 @@
       "password": "5e0c119fea5dd96b3035a0117ffa631ebb81d29b4236a95b8cceda651fcfc88f",
       "id": 3
     }
+  ],
+  "errors": [
+    {
+      "date": "2022-06-07T14:13:14.594Z",
+      "ip": "79.165.236.30",
+      "url": "http://localhost:4200/login",
+      "text": "Error in login user",
+      "id": 1
+    }
   ]
 }

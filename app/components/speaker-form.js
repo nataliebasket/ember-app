@@ -21,8 +21,6 @@ export default Component.extend({
     cancelForm() {
       this.onsubmit();
     },
-
-
   },
 
   didReceiveAttrs() {

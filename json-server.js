@@ -75,7 +75,7 @@ const getBaseRoute = (req) => {
 
 const isAuthorized = (req) => {
   const baseRoute = getBaseRoute(req);
-  if (req.path === '/recaptcha' || req.path === '/users' || req.path === '/token' || ((baseRoute === 'speakers' || baseRoute === 'books' || baseRoute === 'meetings') && req.method === 'GET')) {
+  if (req.path === '/recaptcha' || req.path === '/errors' || req.path === '/users' || req.path === '/token' || ((baseRoute === 'speakers' || baseRoute === 'books' || baseRoute === 'meetings') && req.method === 'GET')) {
     return 200;
   }
 
@@ -143,11 +143,11 @@ server.post('/saveURL', function (req, res) {
   const db = router.db; //lowdb instance
   const book = db.get(entityName).find({ id: entityId }).assign({ cover_url: `${urlBase}${fileName}` }).write();
 
-  // const book = db.get(entityName).find({ id: entityId }).assign({ coverURL: `${urlBase}${fileName}` }).write();
   res.status(200).json(book);
 });
 
-//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+
 // Check authorization
 server.use((req, res, next) => {
   const authorizeCode = isAuthorized(req);
@@ -271,7 +271,6 @@ function responseInterceptor(req, res, next) {
       newBody.id = id;
       arguments[0] = JSON.stringify(newBody);
     }
-
     originalSend.apply(res, arguments);
   };
   next();
@@ -290,7 +289,6 @@ server.use((request, response, next) => {
     let book = Number(request.query.book);
     let dateMeeting = request.query.dateMeeting;
 
-
     if (Number.isNaN(speaker)) { speaker = 'all'}
     if (Number.isNaN(book)) { book = 'all'}
     if (dateMeeting === undefined || dateMeeting === 'Invalid date') { dateMeeting = 'all'}
@@ -303,26 +301,6 @@ server.use((request, response, next) => {
   } else {
     next();
   }
-
-  // if (request.method === 'GET' && request.path === '/meetings' && !Number.isNaN(speaker)) {
-
-  //   const arr = router.db.get('reports').filter(report => report.speakerId === speaker).value();
-  //   const mapArr = arr.map(report => report.meetingId);
-  //   const newMeetings = router.db.get('meetings').filter( meeting => mapArr.some(el => meeting.id === el)).value();
-  //   newMeetings.forEach((newMeeting) =>newMeeting.reports = router.db.get('reports').filter((report) => report.meetingId === newMeeting.id));
-  //   response.json(newMeetings);
-
-  // } else if (request.method === 'GET' && request.path === '/meetings' && !Number.isNaN(book)) {
-
-  //   const arr = router.db.get('reports').filter(report => report.bookId === book).value();
-  //   const mapArr = arr.map(report => report.meetingId);
-  //   const newMeetings = router.db.get('meetings').filter( meeting => mapArr.some(el => meeting.id === el)).value();
-  //   newMeetings.forEach((newMeeting) =>newMeeting.reports = router.db.get('reports').filter((report) => report.meetingId === newMeeting.id));
-  //   response.json(newMeetings);
-
-  // } else {
-  //   next();
-  // }
 });
 
 // Use default router
@@ -332,5 +310,3 @@ let port = 3000;
 server.listen(port, () => {
   console.log(`JSON Server is running at port ${port}`);
 })
-
-

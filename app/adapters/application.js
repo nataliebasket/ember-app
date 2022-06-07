@@ -5,7 +5,7 @@ import ENV from 'flexberry-ember/config/environment';
 
 export default DS.JSONAPIAdapter.extend({
   session: service(),
-  host: ENV.backendURL,
+  host: ENV.backendURL, // URL адрес серверной части
 
   headers: computed(function() {
     let resultHeaders = {
